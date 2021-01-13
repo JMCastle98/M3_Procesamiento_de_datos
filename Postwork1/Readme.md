@@ -1,4 +1,5 @@
-#Postwork Sesión 1.
+#Postwork Sesión 1.#
+
 Objetivo
 
 El Postwork tiene como objetivo que practiques los comandos básicos aprendidos durante la sesión, de tal modo que sirvan para reafirmar el conocimiento. Recuerda que la programación es como un deporte en el que se debe practicar, habrá caídas, pero lo importante es levantarse y seguir adelante. Éxito
