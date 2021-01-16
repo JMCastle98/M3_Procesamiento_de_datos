@@ -83,8 +83,8 @@ prob.conjunta <- t1/margin.table(t1)
 Para facilitar estos cálculos RStudio cuenta con la función `prop.table()`, la cual puede calcular la probabilidad de una tabla, de modo que las expresiones anteriores se pueden reducir a:
 
 ```R
-prob.casa <- prop(margin.table(t1,1))
-prob.visita <- prop(margin.table(t1,2))
+prob.casa <- prop.table(margin.table(t1,1))
+prob.visita <- prop.table(margin.table(t1,2))
 prob.conjunta <- prop.table(t1)
 ```
 
