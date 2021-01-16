@@ -91,9 +91,9 @@ prob.conjunta <- prop.table(t1)
 Finalmente podemos observar las tablas resultantes de las 3 probabilidad calculadas:
 
 ```R
-prob.casa
-prob.visita
-prob.conjunta
+View(prob.casa)
+View(prob.visita)
+View(prob.conjunta)
 ```
 
 Si queremos corroborar la validez de nuestros resultados, es sabido que la suma de las probabilidad debe ser igual a 1, es decir, el 100%. Esto es sencillo de observar utilizando la función `sum()`:
