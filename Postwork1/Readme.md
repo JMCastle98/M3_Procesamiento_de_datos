@@ -52,7 +52,7 @@ Si no se contara con la librería `dplyr`,  se pueden extraer los campos del dat
 df <- data.frame( goles_casa = datos$FTHG , goles_visitante = datos$FTAG)
 ```
 
-Ahora se convierte el data frame resultante en una tabla con la función `table ()`, guardando la tabla en una nueva variable, para aplicar funciones `margin.table()` que utilizaremos para obtener las probabilidades de goles de casa y visita.
+Ahora se convierte el data frame resultante en una tabla con la función `table ()`, guardando la tabla en una nueva variable, para aplicar funciones `margin.table()` que utilizaremos y así obtener las probabilidades de goles de casa y visita.
 
 ```R
 t1 <- table(df) 
@@ -60,9 +60,15 @@ margin.table(t1)
 margin.table(t1,1) 
 margin.table(t1,2) 
 ```
+Para acceder a la documentación de estás funciones podemos pedir ayuda a R con:
 
-Cabe resaltar la finalidad de estas funciones y sus argumentos:
-- table() realiza un conteo de las combinaciones  de goles jugando en casa y como visita contenidas en nuestro dataframe. 
+```R
+?table()
+?margin.table()
+```
+
+Cabe resaltar la finalidad de estas funciones y sus argumentos para este Postwork:
+- table() realiza un conteo de las combinaciones de goles jugando en casa y como visita contenidas en nuestro dataframe. 
 - margin.table() realiza una suma de la tabla de entrada devolviendo en este caso el total de goles.
   - Utilizando margin = 1 como argumento la función obtendremos la cantidad de veces que se anotó "X" goles de casa al sumar las filas de la tabla.
   - Utilizando margin = 2 como argumento la función obtendremos la cantidad de veces que se anotó "X" goles de visita al sumar las columnas de la tabla.
