@@ -1,6 +1,6 @@
 
-## ¡Te damos la bienvenida al repositorio del equipo 12! 
-### Antes que nada nos gustaría presentarnos :wave:. Este equipo esta integrado por:
+## ¡Te damos la bienvenida al repositorio del equipo 12! :wave:
+### Antes que nada nos gustaría presentarnos. Este equipo esta integrado por:
 - Alvarado Flores Edgar
 - Corrales Acosta Evelyn Elena
 - Ovando Castillo Juan Miguel
