@@ -96,7 +96,7 @@ prob.visita
 prob.conjunta
 ```
 
-Si queremos corroborar la validez de nuestros resultados, es sabido que la suma de las probabilidad debe ser igual a 1, es decir, el 100%. Esto es sencillo de observar utilizando la función `sum()´:
+Si queremos corroborar la validez de nuestros resultados, es sabido que la suma de las probabilidad debe ser igual a 1, es decir, el 100%. Esto es sencillo de observar utilizando la función `sum()`:
 
 ```R
 sum(prob.casa)
