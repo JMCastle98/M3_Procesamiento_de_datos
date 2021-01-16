@@ -22,15 +22,15 @@ Para cumplir con el primer objetivo debemos llamar a nuestro archivo csv dentro 
 
 ```R
 setwd("C:/...") 
-datos <- read.csv("SP1920.csv")
+datos <- read.csv("SP1.csv")
 ```
 
 O bien podemos utilizar la URL de donde descargamos el archivo csv y utilizar la función `download.file()`, al que le indicaremos tanto la URL, como el nombre con el que queremos leer el archivo y el modo de apertura, de este modo podemos hacer todo el procedimiento desde R Studio:
 
 ```R
 url_csv <- "https://www.football-data.co.uk/mmz4281/1920/SP1.csv"
-download.file(url = url_csv, destfile = "SP1920.csv", mode = "wb")
-datos <- read.csv("SP1920.csv")
+download.file(url = url_csv, destfile = "SP1.csv", mode = "wb")
+datos <- read.csv("SP1.csv")
 ```
 
 Para comprobar que la variable **datos** efectivamente es un data frame utilizamos la función `class()`, y para conocer los campos del data frame utilizamos `str()`:
