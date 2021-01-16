@@ -8,6 +8,9 @@ str(datos)
 library(dplyr)
 df <- select(datos, FTHG,FTAG)
 
+?table()
+?margin.table()
+
 t1 <- table(df) 
 
 prob.casa <- prop.table(margin.table(t1,1))
