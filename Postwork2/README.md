@@ -43,12 +43,6 @@ Para seleccionar únicamente los campos deseados, nuevamente utilizamos la funci
 lista <- lapply(lista, select, Date, HomeTeam, AwayTeam,FTHG,FTAG,FTR) 
 ```
 
-Sabemos que estos campos del data set son consecutivos por lo que podemos utilizar `:` para reducir la expresión:
-
-```R
-lista <- lapply(lista, select, Date:FTR) 
-```
-
 Con la función `str()` observamos que en el campo `Date` de los data frame tenemos un dato de tipo `Factor`, para realizar la conversión a un dato de tipo fecha nos apoyamos nuevamente de la función `lapply()` junto a la función `mutate`. Como argumentos de esta última indicamos el campo `Date` que se sobrescribirá con el resultado de la función `as.Date()` en el formato *día/mes/año*:
 
 ```R
