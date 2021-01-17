@@ -1,4 +1,4 @@
-# Postwork Sesión 1.
+# Postwork Sesión 2.
 
 #### Objetivos
 1. Importar los datos de soccer de las temporadas 2017/2018, 2018/2019 y 2019/2020 de la primera división de la liga española a R, los datos los podemos encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php
