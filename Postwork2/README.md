@@ -40,7 +40,7 @@ Estas funciones proporcionan mucha información:
 Para seleccionar únicamente los campos deseados, nuevamente utilizamos la función `lapply()`, como argumento indicamos la lista a la que se aplicará la función, y la función a aplicar que en este caso es `select()` de la biblioteca `dplyr` siguiendo como argumentos los campos deseados:
 
 ```R
-lista <- lapply(lista, select, Date, HomeTeam, AwayTeam,FTHG,FTAG,FTR) 
+lista <- lapply(lista, select, Date, HomeTeam, AwayTeam, FTHG, FTAG, FTR) 
 ```
 
 Con la función `str()` observamos que en el campo `Date` de los data frame tenemos un dato de tipo `Factor`, para realizar la conversión a un dato de tipo fecha nos apoyamos nuevamente de la función `lapply()` junto a la función `mutate`. Como argumentos de esta última indicamos el campo `Date` que se sobrescribirá con el resultado de la función `as.Date()` en el formato *día/mes/año*:
