@@ -103,7 +103,7 @@ casa <- ggplot(prob.casa.df, aes( x = prob.casa.df$FTHG, y = prob.casa.df$Freq))
 Para construir el gráfico de barras para las probabilidades marginales del número de goles anotados por el equipo de visita realizamos el mismo procedimiento pero utilizando el data frame correspondiente y sus campos:
 
 ```R
-visita <- ggplot(prob.visita, aes( x = prob.visita$FTAG, y = prob.visita$Freq))+geom_col()
+visita <- ggplot(prob.visita.df, aes( x = prob.visita.df$FTAG, y = prob.visita.df$Freq))+geom_col()
 ```
 
 Finalmente, construir un HeatMap para las probabilidades conjuntas de los números de goles que anotan el equipo de casa y el equipo visitante en un partido, es necesita de algunos cambios en nuestra instrucción:
@@ -114,7 +114,7 @@ Finalmente, construir un HeatMap para las probabilidades conjuntas de los númer
 Utilizando el data frame correspondiente la instrucción sería:
 
 ```R
-conjun <- ggplot(prob.conjunta, aes( x = prob.conjunta$FTHG, y = prob.conjunta$FTAG, fill = prob.conjunta$Freq))+geom_tile()
+conjun <- ggplot(prob.conjunta.df, aes( x = prob.conjunta.df$FTHG, y = prob.conjunta.df$FTAG, fill = prob.conjunta.df$Freq))+geom_tile()
 ```
 
 Para observar los gráficos resultantes basta con llamar a las variables donde se guardaron desde la consola:
