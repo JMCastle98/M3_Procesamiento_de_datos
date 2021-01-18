@@ -25,7 +25,7 @@ library(dplyr)
 library(ggplot2)
 ```
 
-Posteriormente podemos repetir el procedimiento realizado en el [Postwork02](Postwork2/) para obtener el data frame con el que trabajaremos, o podemos llamar el archivo `.csv` que generamos para facilitar el proceso:
+Posteriormente podemos repetir el procedimiento realizado en el [Postwork02](/Postwork2/) para obtener el data frame con el que trabajaremos, o podemos llamar el archivo `.csv` que generamos para facilitar el proceso:
 
 ```R
 data <- read.csv("resultado.csv")
@@ -43,7 +43,7 @@ Ya que necesitamos obtener el conteo de las combinaciones de goles que se dieron
 goles_tabla <- table(goles)
 ```
 
-Como se vio en el [Postwork01](Postwork1/) `margin.table()` realiza una suma de los elementos de una tabla, ya sea de toda la tabla, de sus filas o de sus columnas. Aprovechando esto obtendremos las sumas de goles de casa y visita:
+Como se vio en el [Postwork01](/Postwork1/) `margin.table()` realiza una suma de los elementos de una tabla, ya sea de toda la tabla, de sus filas o de sus columnas. Aprovechando esto obtendremos las sumas de goles de casa y visita:
 
 ```R
 goles_casa <- margin.table(goles_tabla,1)
