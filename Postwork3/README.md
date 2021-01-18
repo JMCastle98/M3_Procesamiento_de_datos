@@ -37,7 +37,7 @@ El siguiente paso es seleccionar los campos de goles de casa (FTHG) y goles de v
 goles <- select(data, FTHG, FTAG)
 ```
 
-Ya que necesitamos obtener el conteo de las combinaciones de goles que se dieron en las temporadas, nos apoyamos la función `table()`: 
+Ya que necesitamos obtener el conteo de las combinaciones de goles que se dieron en los partidos, nos apoyamos la función `table()`: 
 
 ```R
 goles_tabla <- table(goles)
