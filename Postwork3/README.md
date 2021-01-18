@@ -109,7 +109,7 @@ visita <- ggplot(prob.visita, aes( x = prob.visita$FTAG, y = prob.visita$Freq))+
 Finalmente, construir un HeatMap para las probabilidades conjuntas de los números de goles que anotan el equipo de casa y el equipo visitante en un partido, es necesita de algunos cambios en nuestra instrucción:
 
 - Se hará uso de la función `geom_tile()` que genera un HeatMap en lugar de `geom_col()` que genera un gráfico de barras.
-- Como se mencionó anteriormente `aex(x,y)` *maneja las estéticas*, en este caso los ejes estarán dados por los números de goles del equipo de casa y el equipo visitante pero necesitamos los valores de la probabilidad conjunta como tercer estética para rellenar el HeatMap, indicamos esto con un argumento más: `aex(x,y,fill)`.
+- Como se mencionó anteriormente `aex(x,y)` maneja las *estéticas*, en este caso los ejes estarán dados por los números de goles del equipo de casa y el equipo visitante pero necesitamos los valores de la probabilidad conjunta como tercer estética para rellenar el HeatMap, indicamos esto con un argumento más: `aex(x,y,fill)`.
 
 Utilizando el data frame correspondiente la instrucción sería:
 
