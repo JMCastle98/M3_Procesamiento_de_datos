@@ -20,11 +20,43 @@ Ahora graficaremos probabilidades (estimadas) marginales y conjuntas para el nú
 
 1. Con el último data frame obtenido en el postwork de la sesión 2, elabora tablas de frecuencias relativas para estimar las siguientes probabilidades:
 
-- La probabilidad (marginal) de que el equipo que juega en casa anote x goles (x=0,1,2,)
-
+- La probabilidad (marginal) de que el equipo que juega en casa anote x goles (x=0,1,2,). 
 - La probabilidad (marginal) de que el equipo que juega como visitante anote y goles (y=0,1,2,)
-
 - La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el equipo que juega como visitante anote y goles (x=0,1,2,, y=0,1,2,)
+
+El último data frame obtenido corresponde a la recopilación de los datos de la Liga Española desde 2017 a 2020, donde se registran la fecha del partido `Date`
+el equipo local `HomeTeam`, el equipo visitante `AwayTeam`, los goles del equipo local `FTHG`, los goles del equipo visitante `FTAG` y si ganó el local
+o la visita o fue un empate (H/A/D) `FTR`. Ubicamos la carpeta de origen donde se tiene registrado el último data frame.
+
+```R
+setwd("C:/...") 
+datos <- read.csv("Sesion2PostWork.csv")
+```
+
+Hacemos uso de la función table en el data frame, a partir de esto hacemos uso de la frecuencia relativa para obtener la probabilidad. 
+Es decir, casos favorables entre casos totales, para cada caso.
+
+```R 
+Local <-  table(datos$FTHG)
+Local <- as.data.frame(Local)
+Local <- data.frame("Goles"=Local[,1],
+                    "Proba"= round( (Local[,2])/colSums(Local[2]) , 3))
+``` 
+
+
+```R 
+Visita <-  table(datos$FTAG)
+Visita <- as.data.frame(Visita)
+Visita <- data.frame("Goles"=Visita[,1],
+                    "Proba"= round( (Local[,2])/colSums(Visita[2]) , 3))
+``` 
+
+```R 
+Global <- xtabs(~FTAG+FTHG,datos)
+Global <- as.data.frame(Global)
+Global <- data.frame("Goles Local"=Global[,1], "Goles Visita" = Global[,2], 
+                     "Proba"=round( (Global[,3])/colSums(Global[3]) , 4))
+```
 
 2. Realiza lo siguiente:
 
