@@ -63,7 +63,7 @@ Es importante tener en cuenta que la biblioteca `ggplot2` trabaja directamente c
 ```R
 prob.casa.df <- as.data.frame(prob.casa)
 prob.visita.df <- as.data.frame(prob.visita)
-prob.conjunta.df <- as.data.frame(prob.conjunta )
+prob.conjunta.df <- as.data.frame(prob.conjunta)
 ```
 
 Podemos corroborar el cambio de tipo de dato con `class()`: 
