@@ -101,6 +101,10 @@ View(prob.casa)
 View(prob.visita)
 View(prob.conjunta)
 ```
+<img src="../Imágenes/Postwork1.2.JPG" align="right" height="175" width="194">
+<img src="../Imágenes/Postwork1.1.JPG" align="center" height="196" width="192">
+<img src="../Imágenes/Postwork1.3.JPG" align="center" height="907" width="222">
+
 
 Si queremos corroborar la validez de nuestros resultados, es sabido que la suma de las probabilidad debe ser igual a 1, es decir, el 100%. Esto es sencillo de observar utilizando la función `sum()`:
 
