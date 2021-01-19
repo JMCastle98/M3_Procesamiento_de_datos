@@ -91,13 +91,21 @@ Para construir el gráfico de barras para las probabilidades marginales del núm
 Para realizar el gráfico deseado, indicamos el data frame `prob.casa.df` e indicamos los ejes que estarán dados por número de goles y sus probabilidades contenidos en él. Recordemos que dentro de la notación de `ggplot2` estas funciones se enlazan con el símbolo `+`:
 
 ```R
-casa <- ggplot(prob.casa.df, aes( x = FTHG, y = Freq))+geom_col()
+casa <- ggplot(data = prob.casa.df,aes(x=FTHG,y=Freq,fill=FTHG))+
+  geom_bar(stat = "identity")+
+  theme(legend.position = "none")+
+  geom_text(aes(label=(round(Freq,4))),vjust=0, size=3.5)+
+  labs(x="Goles de casa", y= "Probabilidad")
 ```
 
 Para construir el gráfico de barras para las probabilidades marginales del número de goles anotados por el equipo de visita realizamos el mismo procedimiento pero utilizando el data frame correspondiente y sus campos:
 
 ```R
-visita <- ggplot(prob.visita.df, aes( x = FTAG, y = Freq))+geom_col()
+visita <- ggplot(data = prob.visita.df,aes(x=FTAG,y=Freq,fill=FTAG))+
+  geom_bar(stat = "identity")+
+  theme(legend.position = "none")+
+  geom_text(aes(label=(round(Freq,4))),vjust=0, size=3.5)+
+  labs(x="Goles de visita", y= "Probabilidad")
 ```
 
 Finalmente, construir un HeatMap para las probabilidades conjuntas de los números de goles que anotan el equipo de casa y el equipo visitante en un partido, es necesita de algunos cambios en nuestra instrucción:
@@ -108,7 +116,9 @@ Finalmente, construir un HeatMap para las probabilidades conjuntas de los númer
 Utilizando el data frame correspondiente la instrucción sería:
 
 ```R
-conjun <- ggplot(prob.conjunta.df, aes( x = FTHG, y = FTAG, fill = Freq))+geom_tile()
+conjun <- ggplot(prob.conjunta.df, aes( x = FTHG, y = FTAG, fill = Freq))+
+  geom_tile()+
+  labs(x="Goles de casa", y= "Goles de visita", fill="Probabilidad")
 ```
 
 Para observar los gráficos resultantes basta con llamar a las variables donde se guardaron desde la consola:
