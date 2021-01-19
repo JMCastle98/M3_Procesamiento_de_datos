@@ -11,15 +11,22 @@ Los objetivos del postwork son los siguientes
 - La probabilidad (marginal) de que el equipo que juega como visitante anote y goles (y=0,1,2,)
 - La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el equipo que juega como visitante anote y goles (x=0,1,2,, y=0,1,2,)
 
+2. Realizar lo siguiente:
+
+- Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo de casa
+- Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo visitante.
+- Un HeatMap para las probabilidades conjuntas estimadas de los números de goles que anotan el equipo de casa y el equipo visitante en un partido.
 
 #### Desarrollo
 
 El primer paso para desarrollar este postwork es cargar las bibliotecas correspondientes a los paquetes `dplyr` y `ggplot2` ya que haremos uso de funciones pertenecientes a estos:
 
+```R
+library(dplyr)
+library(ggplot2)
+```
 
-Posteriormente podemos repetir el procedimiento realizado en el [Postwork02](/Postwork2/) para obtener el data frame con el que trabajaremos, o podemos llamar el archivo `.csv` que generamos para facilitar el proceso, el cual corresponde a la recopilación de los datos de la Liga Española desde 2017 a 2020, donde se registran la fecha del partido `Date`
-el equipo local `HomeTeam`, el equipo visitante `AwayTeam`, los goles del equipo local `FTHG`, los goles del equipo visitante `FTAG` y si ganó el local
-o la visita o fue un empate (H/A/D) `FTR`.:
+Posteriormente podemos repetir el procedimiento realizado en el [Postwork02](/Postwork2/) para obtener el data frame con el que trabajaremos, o podemos llamar el archivo `.csv` que generamos para facilitar el proceso, el cual corresponde a la recopilación de los datos de la Liga Española desde 2017 a 2020, donde se registran la fecha del partido `Date` el equipo local `HomeTeam`, el equipo visitante `AwayTeam`, los goles del equipo local `FTHG`, los goles del equipo visitante `FTAG` y si ganó el localo la visita o fue un empate (H/A/D) `FTR`.:
 
 ```R
 data <- read.csv("resultado.csv")
@@ -98,7 +105,7 @@ casa <- ggplot(data = prob.casa.df,aes(x=FTHG,y=Freq,fill=FTHG))+
   labs(x="Goles de casa", y= "Probabilidad")
 ```
 
-Para construir el gráfico de barras para las probabilidades marginales del número de goles anotados por el equipo de visita realizamos el mismo procedimiento pero utilizando el data frame correspondiente y sus campos:
+Para construir el gráfico de barras para las probabilidades marginales del número de goles anotados por el equipo de visita, realizamos el mismo procedimiento pero utilizando el data frame correspondiente y sus campos:
 
 ```R
 visita <- ggplot(data = prob.visita.df,aes(x=FTAG,y=Freq,fill=FTAG))+
@@ -111,9 +118,9 @@ visita <- ggplot(data = prob.visita.df,aes(x=FTAG,y=Freq,fill=FTAG))+
 Finalmente, construir un HeatMap para las probabilidades conjuntas de los números de goles que anotan el equipo de casa y el equipo visitante en un partido, es necesita de algunos cambios en nuestra instrucción:
 
 - Se hará uso de la función `geom_tile()` que genera un HeatMap en lugar de `geom_col()` que genera un gráfico de barras.
-- Como se mencionó anteriormente `aex(x,y)` maneja las *estéticas*, en este caso los ejes estarán dados por los números de goles del equipo de casa y el equipo visitante pero necesitamos los valores de la probabilidad conjunta como tercer estética para rellenar el HeatMap, indicamos esto con un argumento más: `aex(x,y,fill)`.
+- Como se mencionó anteriormente `aes(x,y)` maneja las *estéticas*, en este caso los ejes estarán dados por los números de goles del equipo de casa y el equipo visitante pero necesitamos los valores de la probabilidad conjunta como tercer estética para rellenar el HeatMap, indicamos esto con un argumento más: `aex(x,y,fill)`.
 
-Utilizando el data frame correspondiente la instrucción sería:
+Utilizando el data frame correspondiente, la instrucción sería:
 
 ```R
 conjun <- ggplot(prob.conjunta.df, aes( x = FTHG, y = FTAG, fill = Freq))+
@@ -121,19 +128,17 @@ conjun <- ggplot(prob.conjunta.df, aes( x = FTHG, y = FTAG, fill = Freq))+
   labs(x="Goles de casa", y= "Goles de visita", fill="Probabilidad")
 ```
 
-Para observar los gráficos resultantes basta con llamar a las variables donde se guardaron desde la consola:
+Para observar los gráficos resultantes basta con llamar a las variables donde se guardaron desde la consola: 
 
 ```R
 casa
 visita
 conjun
-
 ```
-
 Entregando las siguientes gráficas como resultado:
 
 <p align="center">
-<img src="../Imágenes/Postwork3.1.png" height="262" width="538">
+<img src="../Imágenes/Postwork3.1.png" alt=portfolio_view height="262" width="538">
 </p>
 
 <p align="center">
