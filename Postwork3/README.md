@@ -129,3 +129,9 @@ visita
 conjun
 
 ```
+
+Entregando las siguientes gráficas como resultado:
+
+<img src="../Imágenes/Postwork3.1.png" align="left" height="262" width="538">
+<img src="../Imágenes/Postwork3.2.png" align="left" height="262" width="538">
+<img src="../Imágenes/Postwork3.3.png" align="left" height="262" width="538">
