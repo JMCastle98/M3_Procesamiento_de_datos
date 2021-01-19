@@ -60,6 +60,34 @@ Global <- data.frame("Goles Local"=Global[,1], "Goles Visita" = Global[,2],
 
 2. Realiza lo siguiente:
 
-- Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo de casa
+- Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo de casa.
+```R 
+casa <- ggplot(Local, aes( x = Goles, y= Proba, fill=Goles))+ 
+  geom_col(col="black")+
+  ggtitle("Densidad marginal de los goles de casa") +
+  xlab("Goles de casa") +
+  ylab("Probabilidad")+
+  theme_dark()
+casa
+``` 
 - Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo visitante.
+```R 
+visita <-  ggplot(Visita, aes( x = Goles, y= Proba, fill = Goles))+ 
+  geom_col(col="black")+
+  ggtitle("Densidad marginal de los goles de visita") +
+  xlab("Goles de casa") +
+  ylab("Probabilidad")+
+  theme_dark()
+visita
+``` 
 - Un HeatMap para las probabilidades conjuntas estimadas de los números de goles que anotan el equipo de casa y el equipo visitante en un partido.
+```R 
+conjunta <- ggplot(Global, aes( x = Goles.Local, y= Goles.Visita))+
+              geom_tile(aes(fill = Proba))+
+        ggtitle("Densidad conjunta de los goles anotados") +
+        xlab("Goles de casa") +
+        ylab("Goles de visita")+
+        theme_grey()
+
+conjunta
+```
