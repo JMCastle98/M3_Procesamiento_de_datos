@@ -62,6 +62,8 @@ head(data)
 tail(data)
 dim(data)
 ```
+<img src="../Imágenes/Postwork2.1.JPG" align="center" height="280" width="452">
+
 Una vez que terminamos de tratar nuestra información, podemos escribir un archivo *.csv* a partir de nuestro data frame resultante con la función `write.csv()` e indicando la dirección donde se creará dicho archivo:
 
 ```R
