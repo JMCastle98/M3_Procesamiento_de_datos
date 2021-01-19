@@ -55,7 +55,7 @@ Para formar un único data frame, nos apoyamos de la función `do.call()`, que r
 data <- do.call(rbind, lista)
 ```
 
-Podemos corroborar que el data frame resultante es la combinación deseada observando los primeros y últimos renglones con `head()` y `tail()` o bien observando el las dimensiones finales con `dim()`:
+Podemos corroborar que el data frame resultante es la combinación deseada observando los primeros y últimos renglones con `head()` y `tail()` o bien observando las dimensiones finales con `dim()`:
 
 ```R
 head(data)
