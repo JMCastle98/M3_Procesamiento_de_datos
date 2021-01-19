@@ -17,8 +17,18 @@ prob.casa.df <- as.data.frame(prob.casa)
 prob.visita.df <- as.data.frame(prob.visita)
 prob.conjunta.df <- as.data.frame(prob.conjunta)
 
-casa <- ggplot(prob.casa.df, aes( x = FTHG, y = Freq))+geom_col()
+casa <- ggplot(data = prob.casa.df,aes(x=FTHG,y=Freq,fill=FTHG))+
+  geom_bar(stat = "identity")+
+  theme(legend.position = "none")+
+  geom_text(aes(label=(round(Freq,4))),vjust=0, size=3.5)+
+  labs(x="Goles de casa", y= "Probabilidad")
 
-visita <- ggplot(prob.visita.df, aes( x = FTAG, y = Freq))+geom_col()
+visita <- ggplot(data = prob.visita.df,aes(x=FTAG,y=Freq,fill=FTAG))+
+  geom_bar(stat = "identity")+
+  theme(legend.position = "none")+
+  geom_text(aes(label=(round(Freq,4))),vjust=0, size=3.5)+
+  labs(x="Goles de visita", y= "Probabilidad")
 
-conjun <- ggplot(prob.conjunta.df, aes( x = FTHG, y = FTAG, fill = Freq))+geom_tile()
+conjun <- ggplot(prob.conjunta.df, aes( x = FTHG, y = FTAG, fill = Freq))+
+  geom_tile()+
+  labs(x="Goles de casa", y= "Goles de visita", fill="Probabilidad")
