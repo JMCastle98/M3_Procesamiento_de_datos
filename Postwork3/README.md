@@ -1,5 +1,5 @@
 
-# Postwork Sesión 3
+# Postwork Sesión 3.
 En este postwork se realizan ejercicios correspondientes a la sesión 3 del curso de programación y estadística con R: Análisis Exploratorio de Datos.
 Los objetivos del postwork son los siguientes
 
