@@ -76,10 +76,26 @@ prob.producto.df
 prob.conjunta.df
 ```
 
-Con ambas probabilidades calculadas, podemos dividir ambas y obtener coeficientes con los cuales verificar la independencia de las variables:
+Con ambas probabilidades calculadas, podemos dividir ambas y obtener coeficientes con los cuales verificar la independencia de las variables. Para una mejor observación de los coeficientes y de que combinaciones de los goles de casa (X) y goles de visita (Y) provienen, se diseña un data frame que contenga toda esta información:
 
 ```R
 coef <- (prob.conjunta.df$Freq)/(prob.producto.df$Freq)
+coef.df <- data.frame( "FTHG" = prob.conjunta.df$FTHG , "FTAG" = prob.conjunta.df$FTAG , "Conjun" = prob.conjunta.df$Freq, 
+                       "Prod" = prob.producto.df$Freq,"Coef" = coef )
 ```
+
+Inspeccionando un poco el data frame:
+
+```R
+head(coef.df)
+tail(coef.df)
+```
+
+En la consola se muestra:
+
+
+<p align="center">
+<img src="../Imágenes/Postwork4.3.png" alt=portfolio_view>
+</p>
 
 2. Mediante un procedimiento de boostrap, obtén más cocientes similares a los obtenidos en la tabla del punto anterior. Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior. Menciona en cuáles casos le parece razonable suponer que los cocientes de la tabla en el punto 1, son iguales a 1 (en tal caso tendríamos independencia de las variables aleatorias X y Y).
