@@ -114,7 +114,7 @@ coef.df %>%
 Sabemos entonces que los coeficientes tienen una media con valor de 0.8595708 y los valores de los coeficientes se alejan de la media aproximadamente en 0.9801441. y el histograma siguiente nos muestra de una manera más gráfica que la mayoría de los coeficientes tienen valores entre 0 y 2:
 
 <p align="center">
-<img src="../Imágenes/Postwork4.4.png" alt=portfolio_view>
+<img src="../Imágenes/Postwork44.png" alt=portfolio_view>
 </p>
 
 
