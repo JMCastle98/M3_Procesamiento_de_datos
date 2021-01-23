@@ -124,10 +124,14 @@ Con solo esta información podriamos discutir la independencia de nuestros event
 
 #### El método bootstrap: *"Una tarea imposible"*.
 
-*El nombre tiene relación con la especie de correas (straps, en inglés) que tienen las botas (boots, también en inglés) en su parte superior, sobre todo esas botas de vaqueros que vemos en las películas. Bootstrapping es un término que, al parecer, hace referencia a la acción de elevarse a uno mismo del suelo tirando simultáneamente de las correas de las dos botas. Como os dije, una tarea imposible gracias a la tercera ley Newton."* - [Manuel M. Arias](https://anestesiar.org/2015/una-tarea-imposible-la-tecnica-de-bootstrapping/) 
+<img src="../Imágenes/Postwork4.5.jpg" align="right" height="150" width="100">
+
+*"El nombre tiene relación con la especie de correas (straps, en inglés) que tienen las botas (boots, también en inglés) en su parte superior, sobre todo esas botas de vaqueros que vemos en las películas. Bootstrapping es un término que, al parecer, hace referencia a la acción de elevarse a uno mismo del suelo tirando simultáneamente de las correas de las dos botas. Como os dije, una tarea imposible gracias a la tercera ley Newton."* 
+
+[Manuel M. Arias](https://anestesiar.org/2015/una-tarea-imposible-la-tecnica-de-bootstrapping/) 
 
 
-<img src="../Imágenes/Postwork4.5.jpg" align="right" height="200" width="200">
+
 
  obtén más cocientes similares a los obtenidos en la tabla del punto anterior. 
  Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior.
