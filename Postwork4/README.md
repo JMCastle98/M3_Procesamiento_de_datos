@@ -91,11 +91,32 @@ head(coef.df)
 tail(coef.df)
 ```
 
-En la consola se muestra:
-
+La consola muestra:
 
 <p align="center">
 <img src="../Imágenes/Postwork4.3.png" alt=portfolio_view>
 </p>
+
+Observamos algunos valores de los coeficientes, sin embargo podemos obtener más información analizando estos datos si obtenemos el promedio y la desviación estándar, junto a un histograma que muestre la frecuencia con la que se distribuyen:
+
+```R
+mean(coef)
+sd(coef)
+coef.df %>%
+  ggplot() + 
+  aes(Coef) +
+  geom_histogram(bins = 8, col="black", fill = "green") + 
+  ggtitle("Histograma de Mediciones") +
+  ylab("Frecuencia") +
+  xlab("Coeficientes") + 
+  theme_light()
+```
+Sabemos entonces que los coeficientes tienen una media con valor de 0.8595708 y los valores de los coeficientes se alejan de la media aproximadamente en 0.9801441. y el histograma siguiente nos muestra de una manera más gráfica que la mayoría de los coeficientes tienen valores entre 0 y 2:
+
+<p align="center">
+<img src="../Imágenes/Postwork4.4.png" alt=portfolio_view>
+</p>
+
+
 
 2. Mediante un procedimiento de boostrap, obtén más cocientes similares a los obtenidos en la tabla del punto anterior. Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior. Menciona en cuáles casos le parece razonable suponer que los cocientes de la tabla en el punto 1, son iguales a 1 (en tal caso tendríamos independencia de las variables aleatorias X y Y).
