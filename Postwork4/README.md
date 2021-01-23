@@ -120,10 +120,14 @@ También podemos observar que los coeficientes con valor 0 tienen una alta frecu
 - **Muchos coeficientes 0**: Si el coeficiente vale cero, esto quiere decir que la probabilidad conjunta vale 0 y al realizar la división también le da un valor 0. Esto sucede cuando el marcador finaliza con resultados difíciles de alcanzar, como goleados 7-1 o partidos muy reñidos 5-4. 
 - **Coeficientes superiores a 2**: Esto se da cuando la probabilidad conjunta es mucho más grande que el producto de las marginales. Por ejemplo el marcador 8-2 tiene una probabilidad conjunta baja (0.000877), pero las probabilidades marginales son aún más bajas (1.862e-04). Traduciendo esto, podemos decir que en conjunto es muchisimo más fácil que el marcador en general términe 8-2 en diferentes partidos, a que en un solo partido anotemos 8 goles.
 
-Con solo esta información podriamos discutir la independencia de nuestros eventos. Pero tenemos muy pocos datos con los cuales realizar una afirmación sólida, aquí entra en juego el método boostrap
+Con solo esta información podriamos discutir la independencia de nuestros eventos. Pero tenemos muy pocos datos con los cuales realizar una afirmación sólida, aquí entra en juego el método boostrap.
 
-#### El método bootstrap
+#### El método bootstrap: *"Una tarea imposible"*.
 
+*El nombre tiene relación con la especie de correas (straps, en inglés) que tienen las botas (boots, también en inglés) en su parte superior, sobre todo esas botas de vaqueros que vemos en las películas. Bootstrapping es un término que, al parecer, hace referencia a la acción de elevarse a uno mismo del suelo tirando simultáneamente de las correas de las dos botas. Como os dije, una tarea imposible gracias a la tercera ley Newton."* - [Manuel M. Arias](https://anestesiar.org/2015/una-tarea-imposible-la-tecnica-de-bootstrapping/) 
+
+
+<img src="../Imágenes/Postwork4.5.jpg" align="right" height="200" width="200">
 
  obtén más cocientes similares a los obtenidos en la tabla del punto anterior. 
  Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior.
