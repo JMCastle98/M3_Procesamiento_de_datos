@@ -112,7 +112,7 @@ coef.df %>%
 Sabemos entonces que los coeficientes tienen una media con valor de 0.8595708 y los valores de los coeficientes se alejan de la media aproximadamente en 0.9801441. y el histograma siguiente nos muestra de una manera más gráfica que la mayoría de los coeficientes tienen valores entre 0 y 2:
 
 <p align="center">
-<img src="../Imágenes/Postwork44.png" alt=portfolio_view>
+<img src="../Imágenes/Postwork44.png" alt=portfolio_view height="400" width="700">
 </p>
 
 También podemos observar que los coeficientes con valor 0 tienen una alta frecuencia y que valores superiores a 2 tienen muy poca frecuencia. Esto tiene una explicación algo sencilla desde el punto de vista futbolístico:
@@ -130,8 +130,25 @@ Con solo esta información podriamos discutir la independencia de nuestros event
 
 [Manuel M. Arias](https://anestesiar.org/2015/una-tarea-imposible-la-tecnica-de-bootstrapping/) 
 
+El boostrapping es una técnica de remuestreo, donde las muestras sucesivas se extraen de nuestra muestra y no de una población, siguiendo una serie de pasos repetitivos.
 
+- El primer paso consiste en extraer una muestra a partir de la muestra original, y esta debe extraerse utilizando un muestreo con reposición, de tal forma que algunos elementos no serán seleccionados y otros lo podrán ser más de una vez en cada muestreo.
+- A partir de esta muestra inicial se obtiene el estadístico deseado y se utiliza como estimador de la población. 
 
+Como estimador este estadístico será poco preciso, por lo que se repiten estos dos pasos un alto npumero de veces para obtener un alto número de estimadores. Con estos estimadores construiremos una distribución denominada **Distribución bootstrap** y que representa una aproximación de la verdadera distribución del estadístico de la población. Para que está aproximación sea fiable, la muestra original debe ser *representativa* de la población.
+
+Para realizar el remuestreo de nuestro coeficientes podemos optar por realizar el muestro de forma *"manual"* apoyándonos de la función `sample()`:
+
+```R
+medias <- numeric(5000) #Inicializamos un vector de ceros con 5 mil elementos (tamaño de la remuestra)
+
+for (i in 1:5000){
+  muestra <- sample(coef, replace = T)
+  medias[i] <- mean(muestra)
+}  #Ciclo for que genera 
+
+hist(medias)
+```
 
  obtén más cocientes similares a los obtenidos en la tabla del punto anterior. 
  Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior.
