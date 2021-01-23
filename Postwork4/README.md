@@ -135,7 +135,7 @@ El boostrapping es una técnica de remuestreo, donde las muestras sucesivas se e
 - El primer paso consiste en extraer una muestra a partir de la muestra original, y esta debe extraerse utilizando un muestreo con reposición, de tal forma que algunos elementos no serán seleccionados y otros lo podrán ser más de una vez en cada muestreo.
 - A partir de esta muestra inicial se obtiene el estadístico deseado y se utiliza como estimador de la población. 
 
-Como estimador este estadístico será poco preciso, por lo que se repiten estos dos pasos un alto npumero de veces para obtener un alto número de estimadores. Con estos estimadores construiremos una distribución denominada **Distribución bootstrap** y que representa una aproximación de la verdadera distribución del estadístico de la población. Para que está aproximación sea fiable, la muestra original debe ser *representativa* de la población.
+Como estimador este estadístico será poco preciso, por lo que se repiten estos dos pasos un alto número de veces para obtener un alto número de estimadores. Con estos estimadores construiremos una distribución denominada **Distribución bootstrap** y que representa una aproximación de la verdadera distribución del estadístico de la población. Para que está aproximación sea fiable, la muestra original debe ser *representativa* de la población.
 
 Para realizar el remuestreo de nuestro coeficientes podemos optar por realizar el muestro de forma *"manual"* apoyándonos de la función `sample()`:
 
@@ -149,6 +149,9 @@ for (i in 1:5000){
 
 hist(medias)
 ```
+
+
+
 
  obtén más cocientes similares a los obtenidos en la tabla del punto anterior. 
  Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior.
