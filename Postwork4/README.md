@@ -105,7 +105,7 @@ sd(coef)
 coef.df %>%
   ggplot() + 
   aes(Coef) +
-  geom_histogram(bins = 8, col="black", fill = "green") + 
+  geom_histogram(bins = 16, col="black", fill = "green") + 
   ggtitle("Histograma de Mediciones") +
   ylab("Frecuencia") +
   xlab("Coeficientes") + 
@@ -119,4 +119,5 @@ Sabemos entonces que los coeficientes tienen una media con valor de 0.8595708 y 
 
 
 
-2. Mediante un procedimiento de boostrap, obtén más cocientes similares a los obtenidos en la tabla del punto anterior. Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior. Menciona en cuáles casos le parece razonable suponer que los cocientes de la tabla en el punto 1, son iguales a 1 (en tal caso tendríamos independencia de las variables aleatorias X y Y).
+
+Mediante un procedimiento de boostrap, obtén más cocientes similares a los obtenidos en la tabla del punto anterior. Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior. Menciona en cuáles casos le parece razonable suponer que los cocientes de la tabla en el punto 1, son iguales a 1 (en tal caso tendríamos independencia de las variables aleatorias X y Y).
