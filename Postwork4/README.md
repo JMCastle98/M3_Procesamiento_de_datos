@@ -28,11 +28,9 @@ Si son iguales, es lógico decir que el cociente de ambos sea igual a 1:
 
 De esta forma podemos garantizar la **independencia** de ambas variables.
 
-#### El método bootstrap
-
 #### Desarrollo
 
-En el [Postwork03](/Postwork3/) estimamos las probabilidades conjuntas de que el equipo de casa anote X goles, y el equipo visitante anote Y goles, en un partido. Por lo que el siguiente paso para verificar independencia sería obtener el producto de las probabilidades marginales. Haciendo uso de nuestro archivo csv diseñamos el data frame y cargamos las bibliotecas `ggplot2()` y `dplyr()`:
+En el [Postwork03](/Postwork3/) estimamos las probabilidades conjuntas de que el equipo de casa anote X goles, y el equipo visitante anote Y goles, en un partido. Por lo que el siguiente paso para verificar independencia sería obtener el producto de las probabilidades marginales. Haciendo uso de nuestro archivo `.csv` diseñamos el data frame y cargamos las bibliotecas `ggplot2()` y `dplyr()`:
 
 ```R
 library(dplyr)
@@ -117,7 +115,16 @@ Sabemos entonces que los coeficientes tienen una media con valor de 0.8595708 y 
 <img src="../Imágenes/Postwork44.png" alt=portfolio_view>
 </p>
 
+También podemos observar que los coeficientes con valor 0 tienen una alta frecuencia y que valores superiores a 2 tienen muy poca frecuencia. Esto tiene una explicación algo sencilla desde el punto de vista futbolístico:
+
+- **Muchos coeficientes 0**: Si el coeficiente vale cero, esto quiere decir que la probabilidad conjunta vale 0 y al realizar la división también le da un valor 0. Esto sucede cuando el marcador finaliza con resultados difíciles de alcanzar, como goleados 7-1 o partidos muy reñidos 5-4. 
+- **Coeficientes superiores a 2**: Esto se da cuando la probabilidad conjunta es mucho más grande que el producto de las marginales. Por ejemplo el marcador 8-2 tiene una probabilidad conjunta baja (0.000877), pero las probabilidades marginales son aún más bajas (1.862e-04). Traduciendo esto, podemos decir que en conjunto es muchisimo más fácil que el marcador en general términe 8-2 en diferentes partidos, a que en un solo partido anotemos 8 goles.
+
+Con solo esta información podriamos discutir la independencia de nuestros eventos. Pero tenemos muy pocos datos con los cuales realizar una afirmación sólida, aquí entra en juego el método boostrap
+
+#### El método bootstrap
 
 
-
-Mediante un procedimiento de boostrap, obtén más cocientes similares a los obtenidos en la tabla del punto anterior. Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior. Menciona en cuáles casos le parece razonable suponer que los cocientes de la tabla en el punto 1, son iguales a 1 (en tal caso tendríamos independencia de las variables aleatorias X y Y).
+ obtén más cocientes similares a los obtenidos en la tabla del punto anterior. 
+ Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior.
+ Menciona en cuáles casos le parece razonable suponer que los cocientes de la tabla en el punto 1, son iguales a 1 (en tal caso tendríamos independencia de las variables aleatorias X y Y).
