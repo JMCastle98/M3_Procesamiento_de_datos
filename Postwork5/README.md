@@ -40,4 +40,18 @@ Se reescribe la variable *smalldata* seleccionando únicamente las columnas requ
 write.csv(smalldata,row.names = F,"soccer.csv") 
 ```
 
-A continuación se carga el archivo *soccer.csv* en la variable *listasoccer* con el uso de la función `create.fbRanks.dataframes`
+A continuación se carga el archivo *soccer.csv* en la variable *listasoccer* con el uso de la función `create.fbRanks.dataframes`, la cual entrega como resultado una lista con 4 elementos, de los cuales serán utilizados los elementos `scores` y `teams`, se asignan a las variables *anotaciones* y *equipos* respectivamente.
+
+<img src="../Imágenes/Postwork5.1.PNG" align="center" height="262" width="695">
+
+```R
+listasoccer <- create.fbRanks.dataframes("soccer.csv")
+anotaciones <- listasoccer$scores
+equipos <- listasoccer$teams 
+```
+Ahora se crea la variable *fecha* haciendo uso de la función `unique`para obtener las fechas sin repetir que se encuentran en la variable *anotaciones*, se crea la variable *n* la cual contendrá el número de fechas distintas, en esta ocasión se hace uso de la función `lenght` para obtener el numero de valores contenidos en *fecha*.
+
+```R
+fecha <- unique(anotaciones$date)
+n <- length(fecha) 
+```
