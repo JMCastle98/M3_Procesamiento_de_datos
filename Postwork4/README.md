@@ -183,12 +183,49 @@ El bootstrap entonces nos sirvió para verificar que aún remuestreando los coef
 
 Entonces, como conclusión, podemos rechazar la independecia de las variables X (goles de casa) y Y (goles de visita), esto gracias al remuestreo bootstrap que nos permitió observar el comportamiento de los coficientes y como estos están alejados del valor ideal 1. 
 
-#### Biblioteca boot()
+#### El paquete boot()
 
-El paquete `boot` incluye algunas funciones de utilidad para el cálculo de la distribución bootstrap:
+El paquete `boot` incluye algunas funciones de utilidad para el cálculo de la distribución bootstrap, primero lo cargamos y creamos un data frame que contenga la muestra original:
 
 ```R
 library(boot)
 coefdf <- data.frame(coef) #Data frame auxiliar de los coeficientes obtenidos como primera muestra
 ```
 
+La función `boot()` realiza el remuestreo del estadístico indicado, creamos una función `media` como estadístico que obtenga la media del data frame auxiliar:
+
+```R
+media <- function(coefdf, cocientes)
+{
+  d=coefdf[cocientes,]
+  mean(d)
+}
+```
+
+Aplicamos la función `boot()` indicando el data frame sobre el que hará el remuestreo, el estadístico y el número de veces que se hará:
+
+```R
+replicas <- boot(data=coefdf, statistic = media, R=5000)
+```
+
+La variable replicas es de clase `boot`, observamos algunos de los parámetros resultates con `names()`:
+
+```R
+names(replicas)
+```
+
+Para acceder a las medias calculadas utilizamos el signo `$` como en los data frame y el campo `t` que contiene el resultado de aplicar el estadístico al bootstrap. Podemos conocer el promedio y la desviación estándar, además del histograma de frecuencias: 
+
+```R
+mean(replicas$t)
+sd(replicas$t)
+hist(replicas$t)
+```
+
+El promedio de las medias es 0.8601392 y la desviación estándar es de 0.1236591, valores muy similares a los obtenidos on el procedimiento *"manual"*. El histograma obtenido es el siguiente:
+
+<p align="center">
+<img src="../Imágenes/Postwork4.7.png" alt=portfolio_view height="400" width="700">
+</p>
+
+Contamos entonces con más herramientas para aplicar el método bootstrap a grandes cantidades de datos.
