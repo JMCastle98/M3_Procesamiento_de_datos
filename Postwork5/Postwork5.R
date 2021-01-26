@@ -9,7 +9,6 @@ smalldata <- rename(smalldata, date = Date, home.team = HomeTeam, away.team = Aw
 
 write.csv(smalldata,row.names = F,"soccer.csv")
 
-library(fbRanks)
 
 listasoccer <- create.fbRanks.dataframes("soccer.csv")
 anotaciones <- listasoccer$scores
