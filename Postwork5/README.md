@@ -55,3 +55,24 @@ Ahora se crea la variable *fecha* haciendo uso de la función `unique`para obten
 fecha <- unique(anotaciones$date)
 n <- length(fecha) 
 ```
+
+El siguiente paso es generar un ranking de los equipos utilizando la función `rank.teams`, en esta función específicamos como fecha minima la fecha inicial de la base de datos y cómo máxima la fecha del penúltimo partido, la cual podemos obtener al observar la variable *fecha*. Esta función requiere los campos `score` y `teams` a los cuales serán asignados las variables *anotaciones* y *equipos* respectivamente.
+
+```R
+ranking <- rank.teams(scores = anotaciones,teams = equipos,max.date = "2020-07-16",min.date = "2017-08-18") 
+```
+
+Entregando el siguiente ranking:
+
+<img src="../Imágenes/Postwork5.2.PNG" align="center" height="395" width="459">
+
+Por último se estiman las probabilidad de los siguientes eventos: el equipo de casa gana, el equipo visitante gana o el resultado es un empate para los partidos que se jugaron en la última fecha de la variable *fecha*, utilizando la función `predict` y los elementos `ranking` y `fecha[n]` como argumentos para la misma.
+
+```R
+predict(ranking, date=fecha[n])
+```
+
+Entregando como resultado lo siguiente:
+
+<img src="../Imágenes/Postwork5.3.PNG" align="center" height="147" width="682">
+
