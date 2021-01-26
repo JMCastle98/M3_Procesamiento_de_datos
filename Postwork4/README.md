@@ -137,7 +137,7 @@ El boostrapping es una técnica de remuestreo, donde las muestras sucesivas se e
 
 Como estimador este estadístico será poco preciso, por lo que se repiten estos dos pasos un alto número de veces para obtener un alto número de estimadores. Con estos estimadores construiremos una distribución denominada **Distribución bootstrap** y que representa una aproximación de la verdadera distribución del estadístico de la población. Para que está aproximación sea fiable, la muestra original debe ser *representativa* de la población.
 
-Para realizar el remuestreo de nuestro coeficientes podemos optar por realizar el muestro de forma *"manual"* apoyándonos de la función `sample()`:
+Para realizar el remuestreo de nuestro coeficientes podemos optar por realizar el muestro de forma *"manual"* apoyándonos de la función `sample()` y utilizando la media como estadístico:
 
 ```R
 medias <- numeric(5000) #Inicializamos un vector de ceros con 5 mil elementos (tamaño de la remuestra)
@@ -145,14 +145,50 @@ medias <- numeric(5000) #Inicializamos un vector de ceros con 5 mil elementos (t
 for (i in 1:5000){
   muestra <- sample(coef, replace = T)
   medias[i] <- mean(muestra)
-}  #Ciclo for que genera 
+}  #Ciclo for que genera 5000 muestras con reposición y calcula la media de cada una
 
-hist(medias)
+medias.df %>%
+  ggplot() + 
+  aes(Medias) +
+  geom_histogram(col="black", fill = "red") + 
+  ggtitle("Histograma de medias de los coeficientes r-emuestreados") +
+  ylab("Frecuencia") +
+  xlab("Medias") + 
+  theme_light()
+  
+mean(medias)
+sd(medias)
 ```
 
+Si observamos el histograma de estas medias calculadas:
+
+<p align="center">
+<img src="../Imágenes/Postwork4.6.png" alt=portfolio_view height="400" width="700">
+</p>
+
+Sabiendo que el valor promedio de estas medias es de 0.8596785 con una desviación estándar de 0.1236336, observamos una reducción drástica en la desviación estándar comparándola con desviacón de la muestra original mientras que la media es prácticamente la misma. Si calculamos el intervalo de confianza de las medias:
+
+```R
+quantile(medias, c(0.025, 0.975))
+```
+
+Observamos que la gran mayoría de ellas se encuentran entre 0.626881 y 1.10997. Con ayuda de este remuestreo podemos obtener mejores conclusiones.
 
 
+#### Conclusiones
 
- obtén más cocientes similares a los obtenidos en la tabla del punto anterior. 
- Esto para tener una idea de las distribuciones de la cual vienen los cocientes en la tabla anterior.
- Menciona en cuáles casos le parece razonable suponer que los cocientes de la tabla en el punto 1, son iguales a 1 (en tal caso tendríamos independencia de las variables aleatorias X y Y).
+Con ayuda del remuestreo bootstrap la tarea de analizar muestras sin tener acceso a la población total se simplifica, en este caso pudimos obtener más coeficientes para investigar la independecia de los eventos sin necesidad de analizar más partidos. Como se mencionó en un punto anterior, la distribución está claramente centrada en 0.859, aunque en la muestra original debido a influencia de marcadores con baja probabilidad como 7-6 la desviación era grande, se podía apreciar que gran parte de los datos estaban alrededor de la media.
+
+El bootstrap entonces nos sirvió para verificar que aún remuestreando los coeficientes, la media siempre sería prácticamente la misma e inclusive la dispersión era manor. Esto quiere decir que aún se realizen muchos partidos, las probabilidades tanto conjuntas como marginales de marcadores bajos tienen mayor peso y centran la distribución de los coeficientes alrededor de 0.859.
+
+Entonces, como conclusión, podemos rechazar la independecia de las variables X (goles de casa) y Y (goles de visita), esto gracias al remuestreo bootstrap que nos permitió observar el comportamiento de los coficientes y como estos están alejados del valor ideal 1. 
+
+#### Biblioteca boot()
+
+El paquete `boot` incluye algunas funciones de utilidad para el cálculo de la distribución bootstrap:
+
+```R
+library(boot)
+coefdf <- data.frame(coef) #Data frame auxiliar de los coeficientes obtenidos como primera muestra
+```
+
