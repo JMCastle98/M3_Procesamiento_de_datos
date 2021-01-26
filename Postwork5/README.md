@@ -1,5 +1,5 @@
 
-# Postwork Sesión 5
+# Postwork Sesión 5.
 
 
 #### Objetivos
@@ -42,7 +42,10 @@ write.csv(smalldata,row.names = F,"soccer.csv")
 
 A continuación se carga el archivo *soccer.csv* en la variable *listasoccer* con el uso de la función `create.fbRanks.dataframes`, la cual entrega como resultado una lista con 4 elementos, de los cuales serán utilizados los elementos `scores` y `teams`, se asignan a las variables *anotaciones* y *equipos* respectivamente.
 
+<p align="center">
 <img src="../Imágenes/Postwork5.1.PNG" align="center" height="262" width="695">
+</p>
+
 
 ```R
 listasoccer <- create.fbRanks.dataframes("soccer.csv")
@@ -64,7 +67,10 @@ ranking <- rank.teams(scores = anotaciones,teams = equipos,max.date = "2020-07-1
 
 Entregando el siguiente ranking:
 
+<p align="center">
 <img src="../Imágenes/Postwork5.2.PNG" align="center" height="395" width="459">
+</p>
+
 
 Por último se estiman las probabilidad de los siguientes eventos: el equipo de casa gana, el equipo visitante gana o el resultado es un empate para los partidos que se jugaron en la última fecha de la variable *fecha*, utilizando la función `predict` y los elementos `ranking` y `fecha[n]` como argumentos para la misma.
 
@@ -74,5 +80,7 @@ predict(ranking, date=fecha[n])
 
 Entregando como resultado lo siguiente:
 
+<p align="center">
 <img src="../Imágenes/Postwork5.3.PNG" align="center" height="147" width="682">
+</p>
 
