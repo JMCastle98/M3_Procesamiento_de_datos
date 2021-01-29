@@ -1,5 +1,5 @@
 library(dplyr)
-setwd("C:/Users/JMCas/Directorio_Trabajo/Postwork02")
+setwd("C:/...")
 lista <- lapply(dir(),read.csv)
 
 str(lista)
