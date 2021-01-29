@@ -2,6 +2,8 @@
 
 #### Objetivos
 
+<img src="../Imágenes/logo-mongodb.png" align="right" height="300" width="300">
+
 Utilizando el manejador de BDD _Mongodb Compass_ (previamente instalado), deberás de realizar las siguientes acciones: 
 
 - Alojar el fichero  `data.csv` en una base de datos llamada `match_games`, nombrando al `collection` como `match`
@@ -14,7 +16,6 @@ Utilizando el manejador de BDD _Mongodb Compass_ (previamente instalado), deber�
 
 #### Desarrollo
 
-<img src="Imágenes/logo-mongodb.png" align="right">
 
 <br/>
 
