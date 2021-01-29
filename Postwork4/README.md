@@ -229,3 +229,9 @@ El promedio de las medias es 0.8601392 y la desviación estándar es de 0.123659
 </p>
 
 Contamos entonces con más herramientas para aplicar el método bootstrap a grandes cantidades de datos.
+
+<br/>
+
+[`Anterior`](../Postwork3) | [`Siguiente`](../Postwork4)      
+
+</div>
