@@ -2,7 +2,7 @@
 
 #### Objetivos
 
-<img src="../Imágenes/logo-mongodb.png" align="right" height="300" width="300">
+<img src="../Imágenes/logo-mongodb.png" align="right" height="350" width="300">
 
 Utilizando el manejador de BDD _Mongodb Compass_ (previamente instalado), deberás de realizar las siguientes acciones: 
 
