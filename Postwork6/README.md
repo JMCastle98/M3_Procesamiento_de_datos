@@ -34,7 +34,7 @@ Para obtener el promedio por mes, debemos manipular la información del campo `D
 df <- mutate(df, date = as.Date(date, "%Y-%m-%d"))
 ```
 
-Ahora nos apoyamos del paquete `lubridate` que nos facilita el tratamiento de fechas en R, con la función `floor_date()` indicamos que redonde las fechas al mes inmediato:
+Ahora nos apoyamos del paquete `lubridate` que nos facilita el tratamiento de fechas en R, con la función `floor_date()` indicamos que se deben redondear las fechas al mes inmediato:
 
 ```R
 library(lubridate)
