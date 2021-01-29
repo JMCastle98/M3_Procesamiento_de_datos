@@ -18,9 +18,9 @@ prob.visita.df <- as.data.frame(prob.visita)
 prob.conjunta.df <- as.data.frame(prob.conjunta)
 
 
-#Hasta aquí es postwork03
+#Hasta aquí es el procedimiento del postwork03
 
-#Cálculo los productos de las marginales
+#Cálculo de los productos de las probabilidades marginales
 
 for (i in 1:length(prob.visita.df$Freq)){
   for (j in 1:length(prob.casa.df$Freq)){
@@ -34,25 +34,24 @@ for (i in 1:length(prob.visita.df$Freq)){
   }
 }
 
-#Para comparar
+#Para comparar los df
 prob.producto.df
 prob.conjunta.df
 
-#Hago la división, si da 1 es porque las variables son independientes 
+#Se hace la división, si da 1 es porque las variables son independientes 
 coef <- (prob.conjunta.df$Freq)/(prob.producto.df$Freq)
 
 
-#Hago un dataframe para observar en que casos casi da 1
+#Se hace un dataframe para observar en que casos casi da 1
 coef.df <- data.frame( "FTHG" = prob.conjunta.df$FTHG , "FTAG" = prob.conjunta.df$FTAG , "Conjun" = prob.conjunta.df$Freq, 
                        "Prod" = prob.producto.df$Freq,"Coef" = coef )
 
 coef.df
 
-#reviso la media y desviación de las divisiones, así como el histograma
+#Se revisa la media y desviación de las divisiones, así como el histograma
 
 mean(coef)
 sd(coef)
-hist(coef)
 
 coef.df %>%
   ggplot() + 
