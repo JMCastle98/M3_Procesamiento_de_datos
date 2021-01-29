@@ -84,3 +84,8 @@ Entregando como resultado lo siguiente:
 <img src="../Imágenes/Postwork5.3.PNG" align="center" height="147" width="682">
 </p>
 
+<br/>
+
+[`Anterior`](../Postwork4) | [`Siguiente`](../Postwork6)      
+
+</div>
