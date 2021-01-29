@@ -1,5 +1,5 @@
 library(dplyr)
-setwd("C:/.../DataSets")
+setwd("C:/...")
 lista <- lapply(dir(),read.csv)
 
 str(lista)
