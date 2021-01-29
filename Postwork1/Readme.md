@@ -126,6 +126,6 @@ sum(prob.conjunta)
 
 <br/>
 
-[`Anterior`](../README.md) | [`Siguiente`](../Postwork2)      
+[`Anterior`](https://github.com/LKXoro/BEDU-Rstudio-postworks) | [`Siguiente`](../Postwork2)      
 
 </div>
