@@ -29,6 +29,7 @@ library(ggplot2)
 Posteriormente podemos repetir el procedimiento realizado en el [Postwork02](/Postwork2/) para obtener el data frame con el que trabajaremos, o podemos llamar el archivo `.csv` que generamos para facilitar el proceso, el cual corresponde a la recopilación de los datos de la Liga Española desde 2017 a 2020, donde se registran la fecha del partido `Date` el equipo local `HomeTeam`, el equipo visitante `AwayTeam`, los goles del equipo local `FTHG`, los goles del equipo visitante `FTAG` y si ganó el localo la visita o fue un empate (H/A/D) `FTR`.:
 
 ```R
+setwd("C:/.../DataSets")
 data <- read.csv("resultado.csv")
 ```
 
