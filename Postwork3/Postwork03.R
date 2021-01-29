@@ -32,3 +32,7 @@ visita <- ggplot(data = prob.visita.df,aes(x=FTAG,y=Freq,fill=FTAG))+
 conjun <- ggplot(prob.conjunta.df, aes( x = FTHG, y = FTAG, fill = Freq))+
   geom_tile()+
   labs(x="Goles de casa", y= "Goles de visita", fill="Probabilidad")
+
+casa
+visita
+conjun
