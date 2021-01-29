@@ -1,7 +1,7 @@
 library(dplyr)
 library(fbRanks)
 
-setwd("C:/Users/Diego/Documents/RStudio/P5/")
+setwd("C:/...")
 
 smalldata <- read.csv("resultado.csv")
 smalldata <- select(smalldata,Date:FTAG)
