@@ -17,7 +17,7 @@ Importar el conjunto de datos match.data.csv a `R` y realizar lo siguiente:
 El primer paso para desarrollar el postwork es importar los datos del archivo `csv`, establecemos el directorio de trabajo y asignamos el archivo con la función `read.csv()` que nos devolverá un data frame el cual inspeccionaremos un poco con la función `str()`:
 
 ```R
-setwd("C:/Users/JMCas/Directorio_Trabajo/DataSets")
+setwd("C:/.../DataSets")
 df <- read.csv("match.data.csv")
 str(df)
 ```
@@ -53,11 +53,15 @@ Ahora podemos crear la serie de tiempo y graficarla, los valores promedio están
 
 ```R
 st <- ts(df3[,2], start = c(2010,8),freq=12)
-plot.ts(st)
+plot.ts(st, main = "Promedio de goles por año", xlab ="Años",
+        ylab = "Promedio de goles", sub = "Serie mensual: Agosto 2010 a Diciembre 2018")
 ```
 
 El gráfico resultante es:
 
+<p align="center">
+<img src="../Imágenes/Postwork6.1.png" align="center">
+</p>
 
 <br/>
 
