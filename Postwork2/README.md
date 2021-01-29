@@ -72,3 +72,9 @@ Una vez que terminamos de tratar nuestra información, podemos escribir un archi
 ```R
 write.csv(data,"C:/.../resultado.csv")
 ```
+<br/>
+
+[`Anterior`](../Postwork1) | [`Siguiente`](../Postwork3)      
+
+</div>
+
