@@ -17,4 +17,4 @@ head(data)
 tail(lista)
 dim(data)
 
-write.csv(data,"C:/Users/JMCas/Directorio_Trabajo/resultado.csv")
+write.csv(data,"C:/.../resultado.csv")
