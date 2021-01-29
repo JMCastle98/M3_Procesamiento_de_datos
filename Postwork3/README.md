@@ -148,3 +148,9 @@ Entregando las siguientes gráficas como resultado:
 <p align="center">
 <img src="../Imágenes/Postwork3.3.png" align="center" height="262" width="538">
 </p>
+
+<br/>
+
+[`Anterior`](../Postwork2) | [`Siguiente`](../Postwork4)      
+
+</div>
