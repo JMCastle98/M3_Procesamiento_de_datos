@@ -35,7 +35,7 @@ En el [Postwork03](/Postwork3/) estimamos las probabilidades conjuntas de que el
 ```R
 library(dplyr)
 library(ggplot2)
-setwd("C:/Users/JMCas/Directorio_Trabajo/DataSets")
+setwd("C:/.../DataSets")
 data <- read.csv("resultado.csv")
 
 goles <- select(data, FTHG, FTAG)
