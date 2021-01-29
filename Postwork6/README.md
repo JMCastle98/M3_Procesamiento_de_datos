@@ -21,3 +21,8 @@ Importa el conjunto de datos match.data.csv a `R` y realice lo siguiente:
 
 4. Grafica la serie de tiempo.
 
+<br/>
+
+[`Anterior`](../Postwork5) | [`Siguiente`](../Postwork7)      
+
+</div>
