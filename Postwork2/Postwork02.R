@@ -1,3 +1,4 @@
+#install.packages("dplyr")
 library(dplyr)
 setwd("C:/...")
 lista <- lapply(dir(),read.csv)
