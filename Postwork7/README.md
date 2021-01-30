@@ -62,6 +62,21 @@ print(match)
 <img src="../Imágenes/Postwork7.4.png">
 </p>
 
+Es de nuestro interés el método `count()`, el cual devuelve el número de documentos contenidos en nuestra colección:
+
+```R
+match$count()
+```
+
+El cual coincide con lo observado en **MongoDB Compass**:
+
+<p align="center">
+<img src="../Imágenes/Postwork7.5.png">
+</p>
+
+
+
+
 
 <br/>
 
