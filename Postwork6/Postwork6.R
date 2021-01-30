@@ -1,31 +1,29 @@
 library(dplyr)
+library(lubridate)
 
-setwd("C:/Users/JMCas/Directorio_Trabajo/DataSets")
+setwd("C:/.../DataSets")
 
-data <- read.csv("match.data.csv")
-data$suma <- data$home.score+data$away.score
+df <- read.csv("match.data.csv")
 
-data <- mutate(data, date = as.Date(date, "%Y-%m-%d"))
-data$mes <- format(data$date, "%m")
-data$año <- format(data$date, "%Y")
+str(df)
 
-data <- mutate(data, mes = as.integer(mes))
-data <- mutate(data, año = as.integer(año))
+df <- mutate(df, sumagoles = (home.score+away.score))
 
-data2 <- select(data,suma,mes,año)
+df <- mutate(df, date = as.Date(date, "%Y-%m-%d"))
 
-data3 <- data2 %>% group_by(año,mes) %>% summarize(promedio=mean(suma)) 
+df <- mutate(df, month= month(date))
 
-(saltos <- data3[which((diff(data3$mes) >1)),])
-(reinicios <- data3[which((diff(data3$mes) >1))+1,])
+df <- mutate(df, year= year(date))
 
-data4 <- filter(data3, mes %in% c(8,9,10,11,12,1,2,3,4,5))
-data5 <- filter(data4, año !=2010, año != 2020)
+df2 <- select(df, sumagoles,month,year)
 
-(saltos <- data5[which((diff(data5$mes) >1)),])
-(reinicios <- data5[which((diff(data5$mes) >1))+1,])
+df3 <- df2 %>% group_by(year,month) %>%
+  summarize(promedio=mean(sumagoles))
 
-st1 <- ts(data5$promedio, start = c(2011,1), end = c(2019,12), frequency = 10)
+df4 <- filter(df3, month %in% c(8,9,10,11,12,1,2,3,4,5))
+df5 <- filter(df4, year !=2010, year != 2020)
 
-plot.ts(st1, main = "Promedio de goles por año", xlab ="Años",
-        ylab = "Promedio de goles", sub = "Serie mensual: Enero 2011 a Diciembre 2019")
+st <- ts(df5$promedio, start = c(2011,1),freq=10)
+plot.ts(st, main = "Promedio de goles por año", xlab ="Años",
+        ylab = "Promedio de goles", sub = "Serie mensual: Enero 2011 a Diciembre 2019"
+        ,col = "coral3",lwd = 2)
