@@ -89,8 +89,27 @@ En la consola se muestra:
 <img src="../Imágenes/Postwork7.6.png">
 </p>
 
+Para encontrar el número de goles que anotó el Real Madrid el 20 de diciembre de 2015, podemos realizar una primera consulta que nos diga si hubo partidos ese día:
 
+```R
+match$find(
+  query = '{"Date": "2015-12-20"}'
+)
+```
 
+Observamos que se nos devuelve un data frame vacío, ya que no hubo un resultado que coincidiera con la consulta:
+
+<p align="center">
+<img src="../Imágenes/Postwork7.7.png">
+</p>
+
+Podemos recurrir a realizar una consulta con una expresión regular [`$regex`](https://docs.mongodb.com/manual/reference/operator/query/regex/):
+
+```
+match$find(
+  query = '{"Date" : { "$regex" : "-12-20$", "$options" : "i" }}'
+)
+```
 <br/>
 
 [`Anterior`](../Postwork6) | [`Siguiente`](../Postwork8)      
