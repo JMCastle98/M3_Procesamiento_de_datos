@@ -21,8 +21,13 @@ setwd("C:/.../DataSets")
 df <- read.csv("match.data.csv")
 str(df)
 ```
-La inspección muestra 
-Para añador una nueva columna, con ayuda del paquete `dplyr` y la función `mutate()` añadimos un nuevo campo que sea la suma de goles de casa y goles de visita:
+La inspección muestra que algunos columnas como la fecha son de tipo factor:
+
+<p align="center">
+<img src="../Imágenes/Postwork6.2.png" align="center">
+</p>
+
+Para añadir una nueva columna, con ayuda del paquete `dplyr` y la función `mutate()` añadimos un nuevo campo que sea la suma de goles de casa y goles de visita:
 
 ```R
 library(dplyr)
