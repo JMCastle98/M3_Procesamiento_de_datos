@@ -95,7 +95,7 @@ sd(medias)
 quantile(medias, c(0.025, 0.975))
 
 #aplicando el paquete boot de R
-
+#install.packages("boot")
 library(boot)
 
 coefdf <- data.frame(coef)
