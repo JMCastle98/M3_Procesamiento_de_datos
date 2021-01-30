@@ -34,7 +34,7 @@ Finalmente se subio el archivo `data.csv` a la colección de nuestra base de dat
 <img src="../Imágenes/Postwork7.3.png">
 </p>
 
-Ahora para conectarnos a nuestra base de datos desde R, lo primero que necesitamos es instalar el paquete `mongolite` para su uso:
+Ahora para conectarnos a nuestra base de datos desde R, lo primero que necesitamos es instalar el paquete [`mongolite`](https://jeroen.github.io/mongolite/) para su uso:
 
 ```R
 install.packages("mongolite")
@@ -74,7 +74,20 @@ El cual coincide con lo observado en **MongoDB Compass**:
 <img src="../Imágenes/Postwork7.5.png">
 </p>
 
+Para realizar consultas desde R, podemos recurrir a los diferentes métodos de los objetos de conexión a mongo, utilizando sintaxis [JSON](https://docs.mongodb.com/manual/tutorial/query-documents/). Uno de estos métodos es `find()` el cual nos permite encontrar aquellos documentos que satisfacen nuestra consulta. 
 
+Una ventaja de los métodos del paquete `mongolite` es que devuelven data frames que podemos manipular e inspeccionar con las funciones locales de R, si realizamos una consulta vacía `{}` se nos devolverán todos los documentos de la colección, si queremos observar los primeros y últimos documentos podemos ejecutar:
+
+```R
+head(match$find('{}'))
+tail(match$find('{}'))
+```
+
+En la consola se muestra:
+
+<p align="center">
+<img src="../Imágenes/Postwork7.6.png">
+</p>
 
 
 
