@@ -21,7 +21,7 @@ setwd("C:/.../DataSets")
 df <- read.csv("match.data.csv")
 str(df)
 ```
-
+La inspección muestra 
 Para añador una nueva columna, con ayuda del paquete `dplyr` y la función `mutate()` añadimos un nuevo campo que sea la suma de goles de casa y goles de visita:
 
 ```R
@@ -34,33 +34,45 @@ Para obtener el promedio por mes, debemos manipular la información del campo `D
 df <- mutate(df, date = as.Date(date, "%Y-%m-%d"))
 ```
 
-Ahora nos apoyamos del paquete `lubridate` que nos facilita el tratamiento de fechas en R, con la función `floor_date()` indicamos que se deben redondear las fechas al mes inmediato:
+Ahora nos apoyamos del paquete `lubridate` que nos facilita el tratamiento de fechas en R, con la función `month()` y la función `year()` extraemos el mes y el año:
 
 ```R
 library(lubridate)
-df <- mutate(df, month= floor_date(df$date, "month"))
-df2 <- select(df, sumagoles,month)
+df <- mutate(df, month= month(date))
+df <- mutate(df, year= year(date))
+df2 <- select(df, sumagoles, month, year)
 ```
 
-Teniendo ahora los campos necesarios para obtener el promedio, realizamos una operación *pipe* en la que a partir del **df2** agruparemos por mes el promedio de los goles y lo guardaremos en **df3**:
+Teniendo ahora los campos necesarios para obtener el promedio, realizamos una operación *pipe* en la que a partir del **df2** agruparemos por año y mes el promedio de los goles y lo guardaremos en **df3**:
 
 ```R
-df3 <- df2 %>% group_by(month) %>%
-  summarize(promedio=mean(sumagoles
+df3 <- df2 %>% group_by(year,month) %>%
+  summarize(promedio=mean(sumagoles))
 ```
 
-Ahora podemos crear la serie de tiempo y graficarla, los valores promedio están en la segunda columna de **df3** y gracias a la inspección inicial sabemos que los datos se tomaron a partir de agosto del 2010 e indicamos que una frecuencia de 12 correspondiente a los meses del año:
+### Consideraciones
+Las temporadas de futbol de la liga española generalmente se juegan de agosto a mayo duranto en total 10 meses, en los datos de nuestro archivo `csv` nos encontramos con diferentes circustancias. En el año 2013 se jugó hasta junio durando 11 meses esta temporada y en el año 2020 la temporada se vio interrumpida en marzo por las circustancias derivadas de la pandemia por COVID-19.
+
+En base a esto y teniendo como objetivo de crear la serie de tiempo hasta diciembre de 2019, decidimos conservar los datos en en base a 10 meses pero empezando desde enero del 2011 hasta diciembre del 2019 e ignorando el mes extra jugado en 2013. Teniendo así datos de 10 meses por año, para cumplir esto utilizamos la función `filter()`:
 
 ```R
-st <- ts(df3[,2], start = c(2010,8),freq=12)
+df4 <- filter(df3, month %in% c(8,9,10,11,12,1,2,3,4,5))
+df5 <- filter(df4, year !=2010, year != 2020)
+```
+
+Con los datos filtradosAhora crear la serie de tiempo y graficarla, los valores promedio los extraemos de **df5** y gracias a la inspección sabemos que los datos se tomaran a partir de enero del 2011 e indicamos que una frecuencia de 10 correspondiente a los meses que se jugaron:
+
+```R
+st <- ts(df5$promedio, start = c(2011,1),freq=10)
 plot.ts(st, main = "Promedio de goles por año", xlab ="Años",
-        ylab = "Promedio de goles", sub = "Serie mensual: Agosto 2010 a Diciembre 2018")
+        ylab = "Promedio de goles", sub = "Serie mensual: Enero 2011 a Diciembre 2019"
+        ,col = "coral3",lwd = 2)
 ```
 
 El gráfico resultante es:
 
 <p align="center">
-<img src="../Imágenes/Postwork6.1.png" align="center">
+<img src="../Imágenes/Postwork6.1.jpeg" align="center">
 </p>
 
 <br/>
