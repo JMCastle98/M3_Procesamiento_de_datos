@@ -105,11 +105,39 @@ Observamos que se nos devuelve un data frame vacío, ya que no hubo un resultado
 
 Podemos recurrir a realizar una consulta con una expresión regular [`$regex`](https://docs.mongodb.com/manual/reference/operator/query/regex/):
 
-```
+```R
 match$find(
   query = '{"Date" : { "$regex" : "-12-20$", "$options" : "i" }}'
 )
 ```
+
+Vemos que se jugaron 3 partidos un 20 de diciembre, pero ninguno fue en el año 2015:
+
+
+<p align="center">
+<img src="../Imágenes/Postwork7.8.png">
+</p>
+
+Entonces carecemos de información que nos diga si el 20 de diciembre de 2015 el Real Madrid perdió o dio una goleada. Pero tenemos acceso a información del Real Madrid como el total de partidos desde agosto de 2017 a julio del 2020:
+
+```R
+match$count(
+  query = '{"$or" : [{"AwayTeam": "Real Madrid"},{"HomeTeam": "Real Madrid"}]}'
+)
+```
+Siendo 114 partidos en total:
+
+<p align="center">
+<img src="../Imágenes/Postwork7.9.jpg">
+</p>
+
+Finalmente para desconectarnos de la base de datos utilizamos el método `$disconnect()` para cortar la conexión con la colección y la función `rm()` para eliminar el objeto de tipo mongo que provino del ambiente de `mongolite`:
+
+```R
+match$disconnect( gc = TRUE)
+rm(match)
+```
+
 <br/>
 
 [`Anterior`](../Postwork6) | [`Siguiente`](../Postwork8)      
