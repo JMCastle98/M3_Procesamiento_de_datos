@@ -44,7 +44,7 @@ library(mongolite)
 Al igual que con **MongoDB Compass**, realizar la conexión necesita de la dirección del servidor MongoDB en formato de cadena [URI](https://docs.mongodb.com/manual/reference/connection-string/) :
 
 ```R
-mi url <- mongodb://[username:password@]host1[:port1][,host2[:port2],...[/[database][?options]]
+mi url <- "mongodb://[username:password@]host1[:port1][,host2[:port2],...[/[database][?options]]"
 ```
 
 Esta URL es un parámetro de la función `mongo()` que permite la conexión a una colección de MongoDB, otros parámetros necesarios son el nombre de la base de datos y el nombre de la colección:
