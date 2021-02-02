@@ -48,6 +48,8 @@ setwd("C:/.../DataSets")
 
 SP2015_2016 <- read.csv("SP2015_2016.csv")
 
+library(dplyr)
+
 SP2015_2016 <- mutate(SP2015_2016, Date = as.Date(Date, "%d/%m/%y"))
 
 #Filtramos los campos correctos del data frame
