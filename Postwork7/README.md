@@ -131,6 +131,55 @@ Siendo 114 partidos en total:
 <img src="../Imágenes/Postwork7.9.jpg">
 </p>
 
+Para resolver la incógnita sobre el marcado del Real en esa fecha, proponemos incluir la información de la temporada 2015-2016 de la [`Liga Española`](https://www.football-data.co.uk/spainm.php) en primera división. Esta se encuentra en el data set **SP2015_2016.csv**:
+
+```R
+setwd("C:/.../DataSets")
+SP2015_2016 <- read.csv("SP2015_2016.csv")
+
+```
+
+Ajustamos el formato de la fecha y seleccionamos los campos para que coincidan con el resto de documentos de nuestra colección:
+
+```R
+library(dplyr)
+P2015_2016 <- mutate(SP2015_2016, Date = as.Date(Date, "%d/%m/%y"))
+
+SP2015_2016 <-SP2015_2016 %>% 
+  select(Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR)
+```
+
+Con el método `$insert` podemos añadir un data frame directamente a la colección, siendo cada registro un documento:
+
+```R
+match$insert(SP2015_2016)  
+```
+Realizamos nuevamente el conteo de documentos, el cual se ha incrementado a 1520 ya que el data set contenía 380 filas:
+
+```R
+match$count()
+```
+
+Consultamos de nuevo la fecha deseada y encontramos que se realizaron varios partidos ese día:
+
+```R
+match$find(
+  query = '{"Date": "2015-12-20"}'
+)
+```
+
+Buscamos si en esa fecha el Real Madrid jugó como visitante o en casa
+
+```R
+match$find(
+  query = '{"$and" : [{"Date": "2015-12-20"},
+  {"$or" : [{"AwayTeam": "Real Madrid"},{"HomeTeam": "Real Madrid"}]}]}'
+)
+```
+
+Encontramos entonces un resultado, y vemos que el Real Madrid ganó por goleada 10 a 2 contra el Vallecano:
+
+
 Finalmente para desconectarnos de la base de datos utilizamos el método `$disconnect()` para cortar la conexión con la colección y la función `rm()` para eliminar el objeto de tipo mongo que provino del ambiente de `mongolite`:
 
 ```R
