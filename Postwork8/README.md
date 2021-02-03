@@ -32,7 +32,7 @@ match.data <- read.csv("match.data.csv")
 scores <- select(match.data, home.score,away.score)
 ```
 
-La parte del código que representa nuestro *front-end*, es decir, lo que ve el usuario de la app es la siguiente:
+La parte del código que representa nuestro *front-end*, que se entiende como lo que ve el usuario puede ver, es la siguiente:
 
 ```R
 ui <- fluidPage(
@@ -83,7 +83,7 @@ ui <- fluidPage(
 
 ```
 
-Mientras que la parte del código que representa nuestro *back-end* donde los datos se procesa es la siguiente:
+Mientras que la parte del código que representa nuestro *back-end* donde los datos se procesan es la siguiente:
 
 
 ```R
@@ -111,6 +111,9 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 
 ```
+
+A continuación se muestran los resultados del *front-end* de nuestra app:
+
 
 
 
