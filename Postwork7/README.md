@@ -161,7 +161,7 @@ match$count()
 ```
 
 <p align="center">
-<img src="../Imágenes/Postwork7.10.jpg">
+<img src="../Imágenes/Postwork7.10.png">
 </p>
 
 Consultamos de nuevo la fecha deseada y encontramos que se realizaron varios partidos ese día:
@@ -172,7 +172,7 @@ match$find(
 )
 ```
 <p align="center">
-<img src="../Imágenes/Postwork7.11.jpg">
+<img src="../Imágenes/Postwork7.11.png">
 </p>
 
 Buscamos si en esa fecha el Real Madrid jugó como visitante o en casa
@@ -186,13 +186,13 @@ match$find(
 Encontramos entonces un resultado, y vemos que el Real Madrid ganó por goleada 10 a 2 contra el Vallecano:
 
 <p align="center">
-<img src="../Imágenes/Postwork7.12.jpg">
+<img src="../Imágenes/Postwork7.12.png">
 </p>
 
 Podemos verificar la consulta desde **Mongo Compass**:
 
 <p align="center">
-<img src="../Imágenes/Postwork7.13.jpg">
+<img src="../Imágenes/Postwork7.13.png">
 </p>
 
 Finalmente para desconectarnos de la base de datos utilizamos el método `$disconnect()` para cortar la conexión con la colección y la función `rm()` para eliminar el objeto de tipo mongo que provino del ambiente de `mongolite`:
