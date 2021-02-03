@@ -160,6 +160,10 @@ Realizamos nuevamente el conteo de documentos, el cual se ha incrementado a 1520
 match$count()
 ```
 
+<p align="center">
+<img src="../Imágenes/Postwork7.10.jpg">
+</p>
+
 Consultamos de nuevo la fecha deseada y encontramos que se realizaron varios partidos ese día:
 
 ```R
@@ -167,6 +171,9 @@ match$find(
   query = '{"Date": "2015-12-20"}'
 )
 ```
+<p align="center">
+<img src="../Imágenes/Postwork7.11.jpg">
+</p>
 
 Buscamos si en esa fecha el Real Madrid jugó como visitante o en casa
 
@@ -176,9 +183,17 @@ match$find(
   {"$or" : [{"AwayTeam": "Real Madrid"},{"HomeTeam": "Real Madrid"}]}]}'
 )
 ```
-
 Encontramos entonces un resultado, y vemos que el Real Madrid ganó por goleada 10 a 2 contra el Vallecano:
 
+<p align="center">
+<img src="../Imágenes/Postwork7.12.jpg">
+</p>
+
+Podemos verificar la consulta desde **Mongo Compass**:
+
+<p align="center">
+<img src="../Imágenes/Postwork7.13.jpg">
+</p>
 
 Finalmente para desconectarnos de la base de datos utilizamos el método `$disconnect()` para cortar la conexión con la colección y la función `rm()` para eliminar el objeto de tipo mongo que provino del ambiente de `mongolite`:
 
