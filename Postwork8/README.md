@@ -114,6 +114,22 @@ shinyApp(ui = ui, server = server)
 
 A continuación se muestran los resultados del *front-end* de nuestra app:
 
+<p align="center">
+<img src="../Imágenes/Postwork8.1.png">
+</p>
 
+<p align="center">
+<img src="../Imágenes/Postwork8.2.png">
+</p>
 
+<p align="center">
+<img src="../Imágenes/Postwork8.3.png">
+</p>
 
+<p align="center">
+<img src="../Imágenes/Postwork8.4.png">
+</p>
+
+<p align="center">
+<img src="../Imágenes/Postwork8.5.png">
+</p>
