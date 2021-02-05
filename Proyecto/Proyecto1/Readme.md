@@ -1,4 +1,4 @@
-https://www.kaggle.com/rankirsh/esports-earnings
-https://www.kaggle.com/rushikeshhiray/esport-earnings
-https://www.kaggle.com/jackdaoud/esports-earnings-for-players-teams-by-game
-https://www.kaggle.com/aayushmishra1512/twitchdata
+- https://www.kaggle.com/rankirsh/esports-earnings
+- https://www.kaggle.com/rushikeshhiray/esport-earnings
+- https://www.kaggle.com/jackdaoud/esports-earnings-for-players-teams-by-game
+- https://www.kaggle.com/aayushmishra1512/twitchdata
