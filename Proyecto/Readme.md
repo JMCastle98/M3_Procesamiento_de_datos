@@ -8,7 +8,7 @@ Los esports existen desde hace tiempo, pero es en la actualidad cuando están vi
 
 ### Contenido
  - [Datasets: ¿Con qué información sobre Esports contamos?](Proyecto1/) 
- - [Datos generales: ¡Cómo han crecido los jugadores, torneos y ganancias generadas a lo largo de los años?](Proyecto2/) 
+ - [Datos generales: ¿Cómo han crecido los jugadores, torneos y ganancias generadas a lo largo de los años?](Proyecto2/) 
  - [Géneros: ¿Qué juegos han dado mejores premios?¿Que juegos han tenido más torneos?](Proyecto3/) 
  - [Streaming: Juegos con más seguidores y su promedio de visitas.](Proyecto4/)
  - [Jugadores y equipos: ¿Cuáles ganan más?](Proyecto5/) 
