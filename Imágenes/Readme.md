@@ -4,3 +4,4 @@
 ### Imágen 2 recuperada de: https://es.wikipedia.org/wiki/Liga_de_F%C3%BAtbol_Profesional
 ### Imágen Postwork4.5 recuperada de: http://www.lemen.com/imageBootstrap1.html
 ### Imágen logo-mongodb recuperada de: https://infinapps.com/obira-hosting/mongodb-logo/
+### Imágen portada_definitiva recuperada de: https://rincondelatecnologia.com/esports-deporte-influencia/
