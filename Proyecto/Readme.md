@@ -13,6 +13,6 @@ Los esports existen desde hace tiempo, pero es en la actualidad cuando están vi
  - [Streaming: Juegos con más seguidores y su promedio de visitas.](Proyecto4/)
  - [Jugadores y equipos: ¿Cuáles ganan más?](Proyecto5/) 
  - [Países: ¿Quién ha ganado más torneos?](Proyecto6/) 
- - [Hipótesis: ¿Existe una relación entre las variables?](Proyecto7/)
+ - [Hipótesis: ¿Existe una relación entre las variables?¿Entre cuales?](Proyecto7/)
  - [Predición: El futuro de los Esports](Proyecto8/) 
 
