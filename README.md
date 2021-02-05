@@ -18,5 +18,7 @@ Y somos un grupo de estudiantes que formamos parte del curso de Data Analysis qu
  - [Postwork Sesión 6: Series de tiempo](Postwork6/)
  - [Postwork Sesión 7: RStudio Cloud - Github, conexiones con BDs y lectura de datos externos](Postwork7/) 
  - [Postwork Sesión 8: Dashboards con Shiny - Entorno GUI](Postwork8/)
+ - [Proyecto Final: Análisis de datos de Esports](Proyecto/)
+
 
 
