@@ -121,25 +121,28 @@ TOP_PAISES$Top_Country[which(TOP_PAISES$Top_Country == "Russian Federation")] <-
 Finalmente. podemos construir nuestro gráfico:
 
 ```R
-TOP_PAISES %>% ggplot( aes(ymax=max, ymin=min, xmax=4, xmin=3, fill=Top_Country))+
-  geom_rect(color = "black") + 
-  xlim(c(2, 4))+
-  coord_polar(theta="y")+ 
-  geom_label_repel( x=3.5,aes(y=pos,label=label),size=3,show.legend = FALSE)+
-  scale_fill_brewer(palette="Spectral") + 
-  facet_wrap("Genre")+
-  guides(fill = guide_legend(reverse=F, title = "País"))+
-  theme_void()+
-  ggtitle("Países que han ganado más torneos por género")+
-  theme(plot.title = element_text(hjust = 0.5, vjust = 2))
+TOP_PAISES %>% ggplot( aes(ymax=max, ymin=min, xmax=4, xmin=3, fill=Top_Country))+     #Las estéticas serán los límites máximos y mínimos de cada país
+  geom_rect(color = "black") +                                                         #Las separaciones serán de color negro
+  xlim(c(2, 4))+                                                                       #Límites en el eje x del gráfico
+  coord_polar(theta="y")+                                                              #Establecemos las coordenadas polares en y
+  geom_label_repel( x=3.5,aes(y=pos,label=label),size=3,show.legend = FALSE)+          #Asignaos las etiquetas, el paquete ggrepel() nos ayuda a que no se encimen
+  scale_fill_brewer(palette="Spectral") +                                              #Utilizamos la paleta de 
+  facet_wrap("Genre")+                                                                 #Dividiremos el gráfico de acuerdo al género
+  guides(fill = guide_legend(reverse=F, title = "País"))+                              #Cambiamos el orden de la leyenda y su título
+  theme_void()+                                                                        #El tema vacío retira elementos no deseados del gráfico
+  ggtitle("Países que han ganado más torneos por género")+                             #Colocamos el título del gráfico
+  theme(plot.title = element_text(hjust = 0.5, vjust = 2))                             #Centramos el título
 
-#geom_label_repel es de ggrepel
 
 ```
 
+
 ### Resultados
 
+Al llamar al gráfico se muestra el siguiente resultado:
 
 <p align="center">
 <img src="../../Imágenes/Proyecto6.png">
 </p>
+
+Se observa un dominio repartido entre Estados Unidos, Dinamarca y Corea, mientras que China es un competidor a tener en cuenta. Podemos concluir que el continente asiático domina el género de los MOBA y Estrategia, América domina los Battle Royale y Europa los First-Person Shooter.
