@@ -4,6 +4,8 @@ Cada vez surgen más [estudios](https://www.marca.com/esports/2016/03/15/56e8105
 
 Todo este esfuerzo por parte de los jugadores se ve reflejado en cuantiosos premios que se llevan, ya sea de forma individual o en equipo. Para encontrar aquellos que ganan más dinero, haremos uso de los dataset  `highest_earnings_players.csv` y `highest_earnings_temas.csv` en las `variables ganancias_jugadores` y `ganancias_equipos` respectivamente.
 
+### Pequeñas *"consultas"*
+
 
 
 ```R
@@ -19,7 +21,11 @@ ganancias_jugadores %>% group_by(Genre) %>%
 
 ganancias_jugadores %>% group_by(Genre) %>% 
   filter( TotalUSDPrize == min(TotalUSDPrize)) %>% arrange(desc(TotalUSDPrize))
+```
 
+
+
+```R
 #Media de ganancias por generos de un equipo
 
 ganancias_equipos %>% group_by(Genre) %>%
