@@ -1,6 +1,6 @@
 
 
-# Datos generales: Hipótesis: ¿Existe una relación entre las variables? ¿Entre cuales?
+# Datos generales: Hipótesis: ¿Existe una relación lineal entre las variables? ¿Entre cuales?
 A partir del análisis realizado hasta el momento, se ha desarrollado una amplia teoría de la evolución de los Esports, a todo esto nos surge la siguiente pregunta, ¿Cuál es la relación entre estás variables: las ganancias, los jugadores y los torneos realizados?
 
 Al visualizar los datos a pares, se puede observar que estos suguieren una tendencia lineal, por lo que se prosigue a realizar dicho ajuste para estudiar está relación.
@@ -50,8 +50,8 @@ regresion <- function(){                                                        
     ggplot()+
     aes(x=Jugadores,y = Torneos, color = Date)+                                     #Se eliguen las variables y el color de estás a partir de la fecha
     geom_point()+                                                                   #Asignamos que sea una gráfica de puntos  
-    geom_smooth(method = "lm", se = T, color = "red")+                              #Dentro de la misma gráfica hacemos el ajuste, con el método "lm", este es el mismo
-    labs(title="Método de Regresión lineal para las variables involucradas:         #que se realiza en la parte superior, se agregan demás características
+    geom_smooth(method = "lm", se = T, color = "red")+                              #Dentro de la misma gráfica hacemos el ajuste, con el método "lm", este es el mismo que se                                                                                       #realiza en la parte superior, se agregan demás característica
+    labs(title="Método de Regresión lineal para las variables involucradas:         
                                 Jugadores/Torneos/Ganancias
          ", y="Torneos", 
          x="Jugadores", caption="Esports", colour = "Fecha")+
@@ -111,11 +111,13 @@ Finalmente hacemos un diagnóstico de las regresiones lineales realizadas para s
 
 
 <p align="center">
-<img src="../../Imágenes/ProyectoPt_m1.png">
+<img src="../../Imágenes/ProyectoPt7_m1.png">
 </p>
 <p align="center">
-<img src="../../Imágenes/ProyectoPt_m2.png">
+<img src="../../Imágenes/ProyectoPt7_m2.png">
 </p>
 <p align="center">
-<img src="../../Imágenes/ProyectoPt_m3.png">
+<img src="../../Imágenes/ProyectoPt7_m3.png">
 </p>
+
+Notamos que en ninguna de las anteriores 3 gráficas se tiene tiene un patrón en la gráfica de Residuals vs Fitted, por lo que no se trata de datos manipulados al realizar los datasets, mientras que los valores de las gráficas de Normal Q-Q en su mayoría se ajustan a la curva predicha.
