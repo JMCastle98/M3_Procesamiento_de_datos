@@ -52,7 +52,7 @@ Gracias a funciones como `gsub()` y `which()` el procedimiento resulta bastante 
 Obtener un agrupamiento para estas 4 variables y a partir de ellos realizar un gráfico es un proceso similar en todos los casos, por lo que para reducir significativamente la cantidad de código se optó para crear una función que devuelva un gráfico construido de acuerdo al campo deseado:
 
 ```R
-best_genero <- function(Dato){...}
+best_genero <- function(Dato){
 ```
 
 Donde `dato` es una variable de tipo carácter que servira para filtrar el campo deseado. Esto se logra con `contains()` dentro de la función `select()` del paquete `dplyr`, además seleccionamos el campo Genre (ya que es sobre él que vamos a realizar un agrupamiento) y el campo Game para conocer el juego *top*:
@@ -124,6 +124,8 @@ Por último, realizamos un gráfico de barras con `ggplot`,
   
   return(graph)                                                               #Regresamos el gráfico como resultado de la función
   
+}
+  
 ```
 
 La forma indicada de llamar a la función para cada campo es la siguiente:
@@ -139,15 +141,22 @@ Siendo los primeros dos campos los que nos ayudarán a responder las preguntas c
 
 ### Resultados 
 
+Los gráficos que responder a las preguntas clave son:
+
 ¿Qué juegos han dado los mejores premios?
 
 <p align="center">
 <img src="../../Imágenes/Proyecto2.1.jpeg">
 </p>
 
+Encontramos a Dota 2 siendo el líder con un premio de 229 millones de dólares, seguido de juegos como Counter Strike: Global Offensive y Fortnite con premios alrededor de los 100 millones de dólares en sus respectivos géneros. La lista baja hasta encontrarnos con Tetris en el género de Puzzle dando un premio nada despreciable de 26,400 dólares. 
 
 ¿Qué juegos han tenido más torneos?
 
 <p align="center">
 <img src="../../Imágenes/Proyecto2.2.jpeg">
 </p>
+
+StarCraft II ha sido sin duda un pilar para los eSports, esto se ve reflejado en su popularidad y cantidad de torneos realizados, con un total de 6.061 mil torneos. Del género de MOBA encontramos al popular e influyente League of Legends con 2.483 mil torneos y nuevamente encontramos al género de puzzle en último lugar, con Puyo Puyo tetris y 16 torneos como máximo del género.
+
+
