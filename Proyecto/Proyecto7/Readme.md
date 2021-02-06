@@ -121,3 +121,10 @@ Finalmente hacemos un diagnóstico de las regresiones lineales realizadas para s
 </p>
 
 Notamos que en ninguna de las anteriores 3 gráficas se tiene tiene un patrón en la gráfica de Residuals vs Fitted, por lo que no se trata de datos manipulados al realizar los datasets, mientras que los valores de las gráficas de Normal Q-Q en su mayoría se ajustan a la curva predicha.
+
+
+
+
+## Comprobación de hipótesis
+Comprobamos que nuestras variables poseen una relación lineal entre ellas, las variables "Jugadores" y "Torneos" son las que tienen una mayor relación, con un ajuste cuadrático R^2 = 0.87
+
