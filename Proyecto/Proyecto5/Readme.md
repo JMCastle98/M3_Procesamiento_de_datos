@@ -1,4 +1,8 @@
-#Jugadores y equipos: ¿Cuáles ganan más?¿Es viable convertirse en jugador profesional?
+# Jugadores y equipos: ¿Cuáles ganan más?
+
+Cada vez surgen más [estudios](https://www.marca.com/esports/2016/03/15/56e81056ca474115778b4691.html) que demuestran que los jugadores de esports se ven sometidos a un desgaste similar al de los deportistas tradicionales. El último, realizado por la Universidad Alemana del Deporte en Colonia, revelaba que en intensas partidas profesionales los jugadores de esports generan niveles de estrés similares a los que generan conductores profesionales en carreras. El estudio concluía que *“Los esports son tan exigentes como muchos otros tipos de deporte, sino más."*
+
+Todo este esfuerzo por parte de los jugadores se ve reflejado en cuantiosos premios que se llevan, ya sea de forma individual o en equipo. 
 
 
 ```R
@@ -25,3 +29,8 @@ ganancias_equipos %>% group_by(Genre) %>%
 ganancias_equipos %>% group_by(Genre) %>%
   filter( TotalUSDPrize == max(TotalUSDPrize)) %>% arrange(desc(TotalUSDPrize))
 ```
+
+
+
+
+
