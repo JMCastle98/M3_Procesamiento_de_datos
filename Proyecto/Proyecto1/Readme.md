@@ -73,7 +73,7 @@ library(ggeasy)               #Facilita el manejo de titulos de ggplot dentro de
 
 ### Complementando información
 
-Una de las características del archivo `GeneralEsportData.csv` contiene información de la fecha del lanzamiento de los vídeojuegos, más no así la fecha de los eventos, ni las ganancias por evento o jugadores por evento, debido a esto hallamos la primera dificultad. La cuál solucionaremos a través de realizar una conjunción de este archivo con el  archivo de `HistoricalEsportData.csv` con la función `merge()`:
+Una de las características del archivo `GeneralEsportData.csv` es que contiene información de la fecha del lanzamiento de los vídeojuegos, más no así la fecha de los eventos, ni las ganancias por evento o jugadores por evento, debido a esto hallamos la primera dificultad. La cuál solucionaremos a través de realizar una conjunción de este archivo con el  archivo de `HistoricalEsportData.csv` con la función `merge()`:
 
 ```R
 #JOIN  - merge() - Nos une dos archivos a partir de una llave
