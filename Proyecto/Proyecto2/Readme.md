@@ -1,10 +1,10 @@
 # Datos generales: ¿Cómo han crecido los jugadores, torneos y ganancias generadas a lo largo de los años?
 
-Dan, Explicar un poquito el panorama y que buscas responder, el código es mejor ponerle más comentarios o si quieres ve separando la función, como creas prudente y al final pues ya explicas lo que sale x) 
 
 
+Los Esports irrumpieron en la escena mundial a finales de los 2000 cuando las compañías de videojuegos decideron apostar e invertir cantidades considerables en el desarrollo de juegos y plataformas que permitieran la competencia multijugador, a partir de entonces una cantidad considerable de personas se unieron a estás plataformas, lo que trajo consigo un aumento en el número de jugadores, ganancias y torneos.
 
-Los eSports irrumpieron en la escena mundial a finales de los 2000 cuando las compañías de videojuegos deciden apostar e invertir cantidades considerables en el desarrollo de juegos y plataformas que permitieran la competencia multijugador. .....
+A contunación se muestra un panorama del como han crecido las variables mencionadas a lo largo de los años. 
 
 
 ### FuncionTotal()
