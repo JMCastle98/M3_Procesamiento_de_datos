@@ -1,6 +1,6 @@
 
 
-# Datos generales: ¿Cómo han crecido los jugadores, torneos y ganancias generadas a lo largo de los años?
+# Datos generales: Hipótesis: ¿Existe una relación entre las variables?¿Entre cuales?
 los esports cuentan con un ecosistema sustentable por le que su existencia se mantendrá incluso en crecimiento
 
 
