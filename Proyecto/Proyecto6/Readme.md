@@ -141,5 +141,5 @@ TOP_PAISES %>% ggplot( aes(ymax=max, ymin=min, xmax=4, xmin=3, fill=Top_Country)
 
 
 <p align="center">
-<img src="../../Imágenes/Proyecto6.jpeg">
+<img src="../../Imágenes/Proyecto6.png">
 </p>
