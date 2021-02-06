@@ -71,7 +71,7 @@ FuncionTotal <- function(iluminacion1, iluminacion2, iluminacion3){
 FuncionTotal('123','234','236')
 ```
 
-#Resultados 
+### Resultados 
 
 <p align="center">
 <img src="../../Imágenes/Proyecto1.jpeg">
