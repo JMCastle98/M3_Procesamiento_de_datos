@@ -13,7 +13,7 @@ Esta misma pasión e interés común nos ha motivado a elegir a los Esports como
  - [Datos generales: ¿Cómo han crecido los jugadores, torneos y ganancias generadas a lo largo de los años?](Proyecto2/) 
  - [Géneros: ¿Qué juegos han dado los mejores premios?¿Qué juegos han tenido más torneos?](Proyecto3/) 
  - [Streaming: Juegos con más seguidores y su promedio de visitas.](Proyecto4/)
- - [Jugadores y equipos: ¿Cuáles ganan más?](Proyecto5/) 
+ - [Jugadores y equipos: ¿Cuáles ganan más dinero?](Proyecto5/) 
  - [Países: ¿Quién ha ganado más torneos?](Proyecto6/) 
  - [Hipótesis: ¿Existe una relación entre las variables?¿Entre cuales?](Proyecto7/)
  - [Predición: El futuro de los Esports](Proyecto8/) 
