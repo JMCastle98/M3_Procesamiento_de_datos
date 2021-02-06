@@ -1,6 +1,6 @@
 # Datos generales: ¿Cómo han crecido los jugadores, torneos y ganancias generadas a lo largo de los años?
 
-Dan, Explicar un poquito el panorama, el código es mejor ponerle más comentarios o si quieres ve separandola, como creas prudente y al final pues ya explicas lo que sale x) 
+Dan, Explicar un poquito el panorama y que buscas responder, el código es mejor ponerle más comentarios o si quieres ve separando la función, como creas prudente y al final pues ya explicas lo que sale x) 
 
 
 
