@@ -39,5 +39,38 @@ earnings <- read.csv("ESport_Earnings.csv")
 twitch <- read.csv("twitchdata-update.csv")
 ganancias_jugadores <- read.csv("highest_earning_players.csv")
 ganancias_equipos<- read.csv("highest_earning_teams.csv")
-
 ```
+
+Una vez exportados, echamos un primer vistazo con las funciones `str()` y `summary()`:
+
+```R
+#Analizamos las características de los archivos
+str(general); summary(general)
+str(earnings); summary(earnings)
+str(historical); summary(historical)
+str(twitch); summary(twitch)
+str(ganancias_jugadores); summary(ganancias_jugadores)
+str(ganancias_equipos); summary(ganancias_equipos)
+```
+
+La mayoría de los datos son de númericos, o en su defecto *factores* a los cuales les sacaremos provecho gracias a los *niveles* que poseen, también hay campos de fecha que debemos tratar adecuadamente para una mejor representación de nuestros datos.
+
+### Paquete utilizados
+
+Para facilitar y en algunos casos posibilitar objetivos, hicimos uso de una serie de paquetes de R que deben ser cargados para que nuestras gráficas y resultados se presenten correctamente:
+
+```R
+#Bibliotecas que se usarán
+library(dplyr)                #Manejo de dataframes
+library(ggplot2)              #Manejo de gráficos
+library(magrittr)             #Paquetería para optimizar código
+library(multipanelfigure)     #Crear multipaneles con ggplot
+library(lubridate)            #Manejo de fechas
+library(ggrepel)              #Etiquetas/labels separadas en las gráficas
+library(tsbox)                #TS_BOX le permite a ggplot plotear series de tiempo
+library(ggeasy)               #Facilita el manejo de titulos de ggplot dentro de multipanelfigure
+```
+
+
+
+
