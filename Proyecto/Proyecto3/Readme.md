@@ -67,7 +67,7 @@ La siguiente estapa de la función es una serie de condiciones, dependiendo de l
 if (Dato == "TotalTournaments"){                                                        #Si se solicitó el gráfico de torneos se entra a la condición
     base <- 1e03                                                                        #Se crea una variable del orden de miles
     df <- df %>% group_by(Genre) %>% filter( TotalTournaments == max(TotalTournaments)) #Se agrupa por género el registro con la máxima cantidad de torneos
-    df <- df %>% mutate( Mejor = (TotalTournaments/base))                               #Los torneos se pasan al orden de miles
+    df <- df %>% mutate( Mejor = (TotalTournaments/base))                               #Los torneos se pasan al orden de miles y renombramos la columna como "Mejor"
     xlabel <- "Número de torneos (miles)"                                               #Se declaran etiquetas y título para el gráfico correspondiente
     ylabel <- "Juegos"
     title <- "Juegos con más torneos con base en el género"
@@ -98,25 +98,55 @@ if (Dato == "TotalTournaments"){                                                
   }
 ```
 
-Una vez filtrados y tratados los datos de acuerdo al campo solicitado, así como declarados los elementos gráficos correspondientes, se presentan arreglos para la exposición de los datos en forma descendente, es decir del valor máximo al valor mínimo. :
-
+Una vez filtrados y tratados los datos de acuerdo al campo solicitado, así como declarados los elementos gráficos correspondientes, se presentan arreglos para la exposición de los datos en forma descendente, es decir del valor máximo al valor mínimo. Para que `ggplot` respete este orden, modificamos los campos Genre y Game de tipo factor, reordenando los niveles de acuerdo a la nueva jerarquía:
 
 ```R
- df <- df %>% arrange(desc(df[3]))
+  df <- df %>% arrange(desc(df[3]))    #La función arrage arreglará la tercer columna de df (df[3] == df$Mejor) en formato descendente
   
-  df$Game <- factor(df$Game,
-                    levels = df$Game[order(df[3])])
+  df$Game <- factor(df$Game,                                
+                    levels = df$Game[order(df[3])])      #Ordenamos los niveles de los factores de los campos de juego y género
   
   df$Genre <- factor(df$Genre,
-                     levels = df$Genre[order(df[3])])
+                     levels = df$Genre[order(df[3])])    #Ambos tendrán la jerarquía de "Mejor".
 ```
 
+Por último, realizamos un gráfico de barras con `ggplot`, 
+
+```R
+  graph <- ggplot(df, aes_string( "Mejor", y= "Game", fill= "Genre" ))+       #Declaramos las estéticas
+    geom_col()+                                                               #Establecemos el tipo de gráfico como gráfico de columnas                 
+    guides(fill = guide_legend(reverse=T, title = "Género"))+                 #Invertimos el orden de la leyenda y le damos un título
+    xlab(xlabel)+ylab(ylabel)+ggtitle(title)+                                 #Asignamos las etiquetas declaradas en las condiciones
+    geom_text(aes(label = Mejor),hjust = -0.1)+                               #Mostramos el valor de cada columna
+    theme_bw()+                                                               #Colocamos un fondo blanco
+    theme(plot.title = element_text(hjust = 0.5))                             #Centramos el título
+
+  
+  return(graph)                                                               #Regresamos el gráfico como resultado de la función
+  
+```
+
+La forma indicada de llamar a la función para cada campo es la siguiente:
+
+```R
+(best_genero("TotalEarnings"))
+(best_genero("TotalTournaments"))
+#(best_genero("TotalPlayers"))
+#(best_genero("OnlineEarnings"))
+```
+
+Siendo los primeros dos campos los que nos ayudarán a responder las preguntas clave.
 
 ### Resultados 
+
+¿Qué juegos han dado los mejores premios?
 
 <p align="center">
 <img src="../../Imágenes/Proyecto2.1.jpeg">
 </p>
+
+
+¿Qué juegos han tenido más torneos?
 
 <p align="center">
 <img src="../../Imágenes/Proyecto2.2.jpeg">
