@@ -27,8 +27,89 @@ Para responder a ambas incógnitas, e inclusive un par más, construimos la func
 
 ### best_genero()
 
+Está función trabaja con el data frame `general`, en el cual vienen los datos ponderados referentes a torneos, participantes y ganancias por juegos y géneros. En primera instancia, para una mejor exposición de nuestros resultados, decidimos cambiar los registros de los géneros por sus traducciones al español o acrónimos más fáciles de leer:
+
+```R
+general$Genre <- gsub(" Game","",general$Genre) #Recortamos la palabra
+general$Genre[which(general$Genre == "Multiplayer Online Battle Arena")] <- "MOBA"
+general$Genre[which(general$Genre == "Role-Playing")] <- "RPG"
+general$Genre[which(general$Genre == "Third-Person Shooter")] <- "TPS"
+general$Genre[which(general$Genre == "First-Person Shooter")] <- "FPS"
+general$Genre[which(general$Genre == "Strategy")] <- "Estrategia"
+general$Genre[which(general$Genre == "Collectible Card")] <- "Cartas Coleccionables"
+general$Genre[which(general$Genre == "Sports")] <- "Deportes"
+general$Genre[which(general$Genre == "Fighting")] <- "Peleas"
+general$Genre[which(general$Genre == "Racing")] <- "Carreras"
+```
+
+Gracias a funciones como `gsub()` y `which()` el procedimiento resulta bastante sencillo. Ahora bien, el data frame `general` posee 4 campos que podemos agrupar por género:
+
+- TotalTournaments: Torneos totales de cada juego.
+- TotalEarnings: Ganancias totales otorgadas como premio de cada juego.
+- TotalPlayers: Participantes en cada torneo.
+- OnlineEarnings: Parte de las ganancias totales que se obtuvieron en transacciones online.
+
+Obtener un agrupamiento para estas 4 variables y a partir de ellos realizar un gráfico es un proceso similar en todos los casos, por lo que para reducir significativamente la cantidad de código se optó para crear una función que devuelva un gráfico construido de acuerdo al campo deseado:
+
+```R
+best_genero <- function(Dato){...}
+```
+
+Donde `dato` es una variable de tipo carácter que servira para filtrar el campo deseado. Esto se logra con `contains()` dentro de la función `select()` del paquete `dplyr`, además seleccionamos el campo Genre (ya que es sobre él que vamos a realizar un agrupamiento) y el campo Game para conocer el juego *top*:
+
+```R
+df <- general %>% select(Genre,Game,contains(Dato)) 
+```
+
+La siguiente estapa de la función es una serie de condiciones, dependiendo de la entrada `dato` se utilizarán ciertas variables para la construcción del gráfico correspondiente, las condiciones siguen una estructura general que se comenta a continuación:
+
+```R
+if (Dato == "TotalTournaments"){                                                        #Si se solicitó el gráfico de torneos se entra a la condición
+    base <- 1e03                                                                        #Se crea una variable del orden de miles
+    df <- df %>% group_by(Genre) %>% filter( TotalTournaments == max(TotalTournaments)) #Se agrupa por género el registro con la máxima cantidad de torneos
+    df <- df %>% mutate( Mejor = (TotalTournaments/base))                               #Los torneos se pasan al orden de miles
+    xlabel <- "Número de torneos (miles)"                                               #Se declaran etiquetas y título para el gráfico correspondiente
+    ylabel <- "Juegos"
+    title <- "Juegos con más torneos con base en el género"
+  } 
+  if (Dato == "TotalEarnings"){
+    base <- 1e06
+    df <- df %>% group_by(Genre) %>% filter( TotalEarnings == max(TotalEarnings))
+    df <- df %>% mutate( Mejor = signif((TotalEarnings/base),3))
+    xlabel <- "Premio en mdd"
+    ylabel <- "Juegos"
+    title <- "Juegos con los mejores premios con base en el género"
+  }
+  if (Dato == "TotalPlayers"){
+    base <- 1e03
+    df <- df %>% group_by(Genre) %>% filter( TotalPlayers == max(TotalPlayers))
+    df <- df %>% mutate( Mejor = (TotalPlayers/base))
+    xlabel <- "Número de participantes (miles)"
+    ylabel <- "Juegos"
+    title <- "Juegos con la mayor cantidad de participantes con base en el género"
+  }
+  if (Dato == "OnlineEarnings"){
+    base <- 1e06
+    df <- df %>% group_by(Genre) %>% filter( OnlineEarnings == max(OnlineEarnings))
+    df <- df %>% mutate( Mejor = signif((OnlineEarnings/base),3))
+    xlabel <- "Premio Online en mdd"
+    ylabel <- "Juegos"
+    title <- "Juegos con las mejores recaudaciones online con base en el género"
+  }
+```
+
+Una vez filtrados y tratados los datos de acuerdo al campo solicitado, así como declarados los elementos gráficos correspondientes, se presentan arreglos para la exposición de los datos en forma descendente, es decir del valor máximo al valor mínimo. :
 
 
+```R
+ df <- df %>% arrange(desc(df[3]))
+  
+  df$Game <- factor(df$Game,
+                    levels = df$Game[order(df[3])])
+  
+  df$Genre <- factor(df$Genre,
+                     levels = df$Genre[order(df[3])])
+```
 
 
 ### Resultados 
