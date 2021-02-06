@@ -90,6 +90,6 @@ regresion()
 ### Resultados 
 
 <p align="center">
-<img src="../../Imágenes/Proyecto1.jpeg">
+<img src="../../Imágenes/Regresion.png">
 </p>
  esto más adelante.
