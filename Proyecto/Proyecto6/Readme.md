@@ -1,8 +1,8 @@
 # Países: ¿Quién ha ganado más torneos?
 
-Esta claro que los eSports al ser un fenómeno mundial, presenta competidores de todo el mundo, y como se ha visto en otros deportes, la lucha por el ser el mejor ha motivado a los jugadores a enfrentarse entre ellos para medir sus habilidades y así encontrar al mejor. 
+Esta claro que los eSports al ser un fenómeno mundial, presentan competidores de todo el mundo, y como se ha visto en otros deportes, la lucha por el ser el mejor ha motivado a los jugadores a enfrentarse entre ellos para medir sus habilidades y así encontrar al mejor. 
 
-Pero todos los jugadores llevan en alto la bandera de lugar de nacimiento, entonces también nos podemos preguntrar, qué países o regiones son los mejores? ¿Quién ha ganado más torneos? Para responder a esto llevamos a cabo el siguiente análisis.
+Pero todos los jugadores llevan en alto la bandera de su lugar de nacimiento, entonces también nos podemos preguntar, qué países o regiones son los mejores? ¿Quién ha ganado más torneos? Para responder a esto, llevamos a cabo el siguiente análisis.
 
 ### TOP_PAISES 
 
