@@ -126,5 +126,5 @@ Notamos que en ninguna de las anteriores 3 gráficas se tiene tiene un patrón e
 
 
 ## Comprobación de hipótesis
-Comprobamos que nuestras variables poseen una relación lineal entre ellas, las variables "Jugadores" y "Torneos" son las que tienen una mayor relación, con un ajuste cuadrático R^2 = 0.87
+Comprobamos que nuestras variables poseen una relación lineal entre ellas, las variables "Jugadores" y "Torneos" son las que tienen una mayor relación, con un ajuste cuadrático 0.87, mientras que las variables "Jugadores" y "Ganancias" cuentan con un ajuste de 0.63 y finalmente "Torneos" y "Ganancias" 0.47.
 
