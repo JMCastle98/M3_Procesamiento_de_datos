@@ -6,7 +6,7 @@ Los deportes electrónicos o esports son una actividad en la que dos o más juga
 <img src="../Imágenes/portada_definitiva.jpg">
 </p>
 
-Esta misma pasión e interés común nos ha motivado a elegir a los esports como un tema interesante, del cual podemos obtener mucha información para exponer el potencial que todavía pueden alcanzar los deportes electrónicos. Para realizar este proyecto analizamos diferentes datasets, de los cuales filtramos la información que pudiera responder algunas preguntas claves, así como hipótesis que discuten el futuro de los esports:
+Esta misma pasión e interés común nos ha motivado a elegir a los esports como un tema interesante, del cual podemos obtener mucha información para exponer el potencial que todavía pueden alcanzar los deportes electrónicos. Para realizar este proyecto analizamos diferentes datasets, de los cuales filtramos la información que pudiera responder algunas preguntas claves, así como hipótesis que discuten el futuro de los esports.
 
 ### Contenido
  - [Datasets: ¿Con qué información sobre Esports contamos?](Proyecto1/) 
