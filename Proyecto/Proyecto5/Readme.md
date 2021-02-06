@@ -16,20 +16,23 @@ ganancias_jugadores %>% group_by(Genre) %>%
 ```
 
 <p align="center">
-<img src="../../Imágenes/Proyecto5.1.png">
+<img src="../../Imágenes/Proyecto51.png">
 </p>
+
+Como se ha demostrado en resultados anteriores, estos géneros son los dominantes. Observamos que la media de premios va desde 135 mil dólares hasta 878 mil dólares. Pero para aspirar a los premios más grandes se necesita mucha dedicación y entrenamiento, aquellos que han demostrado lo que valen y se han llevado las cantidades más altas son:
 
 
 ```R
-#Ganancias máximas y mínimas de un jugador por genero
+#Ganancias máximas de un jugador por genero
 
 ganancias_jugadores %>% group_by(Genre) %>% 
   filter( TotalUSDPrize == max(TotalUSDPrize)) %>% arrange(desc(TotalUSDPrize))
-
-ganancias_jugadores %>% group_by(Genre) %>% 
-  filter( TotalUSDPrize == min(TotalUSDPrize)) %>% arrange(desc(TotalUSDPrize))
+  
 ```
 
+<p align="center">
+<img src="../../Imágenes/Proyecto5.2.png">
+</p>
 
 
 ```R
@@ -37,13 +40,23 @@ ganancias_jugadores %>% group_by(Genre) %>%
 
 ganancias_equipos %>% group_by(Genre) %>%
   summarise( Media = mean(TotalUSDPrize)) %>% arrange(desc(Media))
+```
 
+<p align="center">
+<img src="../../Imágenes/Proyecto53.png">
+</p>
+
+
+```R
 #Ganancias máximas de un equipo por genero
 
 ganancias_equipos %>% group_by(Genre) %>%
   filter( TotalUSDPrize == max(TotalUSDPrize)) %>% arrange(desc(TotalUSDPrize))
 ```
 
+<p align="center">
+<img src="../../Imágenes/Proyecto5.4.png">
+</p>
 
 
 
