@@ -22,7 +22,7 @@ Jack Daoud mediante scrapping obtuvo información sobre jugadores y equipos gana
 
 #### [Top Streamers on Twitch](https://www.kaggle.com/aayushmishra1512/twitchdata)
 
-Finalmente, dado que el medio de difusión más importante para los Esporst son las plataformas de streaming, con ayuda del dataset `twitchdata-update.csv` de Aayush Mishra tenemos acceso información que nos permitiría identificar a los esports en estos medios.
+Finalmente, dado que el medio de difusión más importante para los Esporst son las plataformas de streaming, con ayuda del dataset `twitchdata-update.csv` de Aayush Mishra, tenemos acceso información que nos permitiría identificar a los esports en estos medios.
 
 ### Exportando los dataset a R
 
@@ -71,6 +71,17 @@ library(tsbox)                #TS_BOX le permite a ggplot plotear series de tiem
 library(ggeasy)               #Facilita el manejo de titulos de ggplot dentro de multipanelfigure
 ```
 
+### Complementando información
 
+Una de las características del archivo `GeneralEsportData.csv` contiene información de la fecha del lanzamiento de los vídeojuegos, más no así la fecha de los eventos, ni las ganancias por evento o jugadores por evento, debido a esto hallamos la primera dificultad. La cuál solucionaremos a través de realizar una conjunción de este archivo con el  archivo de `HistoricalEsportData.csv` con la función `merge()`:
+
+```R
+#JOIN  - merge() - Nos une dos archivos a partir de una llave
+join <- merge(x = general, y = historical, by = "Game", all = TRUE)  
+join <- mutate(join, Date = as.Date(Date, "%Y-%m-%d"))                #Pasamos a formato de fecha el campo Date
+
+str(join)       #Características del data frame unido
+summary(join)
+```
 
 
