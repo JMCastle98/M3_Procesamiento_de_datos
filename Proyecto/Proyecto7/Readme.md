@@ -1,6 +1,6 @@
 
 
-# Datos generales: Hipótesis: ¿Existe una relación entre las variables?¿Entre cuales?
+# Datos generales: Hipótesis: ¿Existe una relación entre las variables? ¿Entre cuales?
 A partir del análisis realizado hasta el momento, se ha desarrollado una amplia teoría de la evolución de los Esports, a todo esto nos surge la siguiente pregunta, ¿Cuál es la relación entre estás variables: las ganancias, los jugadores y los torneos realizados?
 
 Al visualizar los datos a pares, se puede observar que estos suguieren una tendencia lineal, por lo que se prosigue a realizar dicho ajuste para estudiar está relación.
@@ -30,6 +30,14 @@ m2 <- lm(Ganancias ~ Jugadores)                          #Ajuste de Jugadores y 
 m3 <- lm(Ganancias ~ Torneos)                            #Ajuste de Torneos y Ganancias
 summary(m1); summary(m2) ; summary(m3)                   #Resumen de las variables
 ```
+
+<p align="center">
+<img src="../../Imágenes/Proyecto_summary.png">
+</p>
+Cada una presenta un p-value menor a 0.05 y en cada una se tiene un coeficiente de determinanción aceptable para el ajuste.
+
+
+ 
  
  Una vez realizado el ajuste se prosigue a crear una función donde se visualicen el ajuste, la función:
  #### Regresion()
@@ -93,8 +101,21 @@ regresion()                                                          #Al mandar 
 ```
 
 
-
+Observamos que cada una de estás variables siguen una tendencia lineal, unas en mayor medida que otras
 <p align="center">
 <img src="../../Imágenes/Regresion.png">
 </p>
-### Pruba de anova()
+
+
+Finalmente hacemos un diagnóstico de las regresiones lineales realizadas para saber si cumplen con nuestra hipótesis
+
+
+<p align="center">
+<img src="../../Imágenes/ProyectoPt_m1.png">
+</p>
+<p align="center">
+<img src="../../Imágenes/ProyectoPt_m2.png">
+</p>
+<p align="center">
+<img src="../../Imágenes/ProyectoPt_m3.png">
+</p>
