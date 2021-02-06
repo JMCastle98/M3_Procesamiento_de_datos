@@ -9,7 +9,7 @@ Todo este esfuerzo por parte de los jugadores se ve reflejado en cuantiosos prem
 Antes de observar los astrónomicos premios que se llevan algunos jugadores, podemos buscar las ganancias medias que ellos se llevan en los distintos géneros:
 
 ```R
-#Media de ganancias por generos de un jugador
+#Media de ganancias por géneros de un jugador
 ganancias_jugadores %>% group_by(Genre) %>%
    summarise( Media = mean(TotalUSDPrize)) %>% arrange(desc(Media))
    
@@ -23,7 +23,7 @@ Como se ha demostrado en resultados anteriores, estos géneros son los dominante
 
 
 ```R
-#Ganancias máximas de un jugador por genero
+#Ganancias máximas de un jugador por género
 
 ganancias_jugadores %>% group_by(Genre) %>% 
   filter( TotalUSDPrize == max(TotalUSDPrize)) %>% arrange(desc(TotalUSDPrize))
@@ -35,8 +35,10 @@ ganancias_jugadores %>% group_by(Genre) %>%
 </p>
 
 
+Si llevamos a cabo el mismo agrupamiento para los equipos:
+
 ```R
-#Media de ganancias por generos de un equipo
+#Media de ganancias por géneros de un equipo
 
 ganancias_equipos %>% group_by(Genre) %>%
   summarise( Media = mean(TotalUSDPrize)) %>% arrange(desc(Media))
@@ -48,7 +50,7 @@ ganancias_equipos %>% group_by(Genre) %>%
 
 
 ```R
-#Ganancias máximas de un equipo por genero
+#Ganancias máximas de un equipo por género
 
 ganancias_equipos %>% group_by(Genre) %>%
   filter( TotalUSDPrize == max(TotalUSDPrize)) %>% arrange(desc(TotalUSDPrize))
