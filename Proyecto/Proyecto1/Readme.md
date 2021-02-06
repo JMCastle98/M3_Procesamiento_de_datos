@@ -1,3 +1,7 @@
+
+
+<img src="../../Imágenes/logo_kaggle.png" align="right" height="200" width="300">
+
 Los datasets que utilizamos en nuestro proyecto los obtuvimos del sitio web [kaggle](https://www.kaggle.com/), una comunidad online de científicos de datos y practicantesw de machine learning, donde los usuarios pueden encontrar y compartir data sets públicos, explorar modelos y análisis de otros usuarios e inclusive participar en competencias.
 
 
