@@ -143,7 +143,7 @@ Siendo los primeros dos campos los que nos ayudarán a responder las preguntas c
 
 Los gráficos que responder a las preguntas clave son:
 
-¿Qué juegos han dado los mejores premios?
+#¿Qué juegos han dado los mejores premios?
 
 <p align="center">
 <img src="../../Imágenes/Proyecto2.1.jpeg">
@@ -151,12 +151,10 @@ Los gráficos que responder a las preguntas clave son:
 
 Encontramos a Dota 2 siendo el líder con un premio de 229 millones de dólares, seguido de juegos como Counter Strike: Global Offensive y Fortnite con premios alrededor de los 100 millones de dólares en sus respectivos géneros. La lista baja hasta encontrarnos con Tetris en el género de Puzzle dando un premio nada despreciable de 26,400 dólares. 
 
-¿Qué juegos han tenido más torneos?
+#¿Qué juegos han tenido más torneos?
 
 <p align="center">
 <img src="../../Imágenes/Proyecto2.2.jpeg">
 </p>
 
 StarCraft II ha sido sin duda un pilar para los eSports, esto se ve reflejado en su popularidad y cantidad de torneos realizados, con un total de 6.061 mil torneos. Del género de MOBA encontramos al popular e influyente League of Legends con 2.483 mil torneos y nuevamente encontramos al género de puzzle en último lugar, con Puyo Puyo tetris y 16 torneos como máximo del género.
-
-
