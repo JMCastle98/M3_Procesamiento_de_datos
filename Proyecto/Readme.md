@@ -1,10 +1,12 @@
 ## Análisis de datos de Esports
 
-Los esports existen desde hace tiempo, pero es en la actualidad cuando están viviendo su mejor momento en términos de notoriedad, inversión y seguidores, gracias también a la expansión de internet y las nuevas tecnologías y plataformas. Lo que en un principio eran torneos minoritarios o locales, en los últimos tiempos se ha convertido en un fenómeno en el que no solo los jugadores profesionales están implicados, sino también los millones de fans de los videojuegos y la competición que lo siguen desde sus casas o llenan estadios de todo el mundo, desde Seúl hasta Berlín, pasando por Nueva York o Madrid.
+Los deportes electrónicos o esports son una actividad en la que dos o más jugadores compiten en un videojuego, las competencias de este tipo de deportes pueden llevarse a cabo de forma remota o presencial en eventos pertenecientes a ligas o torneos. Los esports existen desde hace tiempo, ya en los años 80, con los primeros videojuegos se organizaban grandes torneos. El alcance de los esports se ha visto beneficiado de la expansión del internet, las nuevas tecnologías y plataformas. En la actualidad los esports están viviendo su mejor momento gracias a la increíble difusión de los medios, la inversión de los patrocinadores y sobretodo la pasión de sus seguidores. 
 
 <p align="center">
 <img src="../Imágenes/portada_definitiva.jpg">
 </p>
+
+Esta misma pasión e interés común nos ha motivado a elegir a los esports como un tema interesante, del cual podemos obtener mucha información para exponer el potencial que todavía pueden alcanzar los deportes electrónicos. Para realizar este proyecto analizamos diferentes datasets, de los cuales filtramos la información que pudiera responder algunas preguntas claves, así como hipótesis que discuten el futuro de los esports:
 
 ### Contenido
  - [Datasets: ¿Con qué información sobre Esports contamos?](Proyecto1/) 
