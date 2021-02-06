@@ -24,8 +24,20 @@ Jack Daoud mediante scrapping obtuvo información sobre jugadores y equipos gana
 
 Finalmente, dado que el medio de difusión más importante para los Esporst son las plataformas de streaming, con ayuda del dataset `twitchdata-update.csv` de Aayush Mishra tenemos acceso información que nos permitiría identificar a los esports en estos medios.
 
+### Exportando los dataset a R
 
-
+Los data set de kaggle vienen convenientemente guardados en archivos `.csv`, por lo que si los hemos descargado, basta con establecer el directorio de trabajo y la función
+`read.csv()` será más que suficiente para que R nos exporte nuestros archivos como un data frame:
 
 ```R
+setwd("C:/.../Proyecto")
+
+#Archivos que se usarán
+general <- read.csv("GeneralEsportData.csv")
+historical <- read.csv("HistoricalEsportData.csv")
+earnings <- read.csv("ESport_Earnings.csv")
+twitch <- read.csv("twitchdata-update.csv")
+ganancias_jugadores <- read.csv("highest_earning_players.csv")
+ganancias_equipos<- read.csv("highest_earning_teams.csv")
+
 ```
