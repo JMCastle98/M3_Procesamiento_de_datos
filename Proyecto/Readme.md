@@ -11,7 +11,7 @@ Esta misma pasión e interés común nos ha motivado a elegir a los esports como
 ### Contenido
  - [Datasets: ¿Con qué información sobre Esports contamos?](Proyecto1/) 
  - [Datos generales: ¿Cómo han crecido los jugadores, torneos y ganancias generadas a lo largo de los años?](Proyecto2/) 
- - [Géneros: ¿Qué juegos han dado mejores premios?¿Que juegos han tenido más torneos?](Proyecto3/) 
+ - [Géneros: ¿Qué juegos han dado mejores premios?¿Qué juegos han tenido más torneos?](Proyecto3/) 
  - [Streaming: Juegos con más seguidores y su promedio de visitas.](Proyecto4/)
  - [Jugadores y equipos: ¿Cuáles ganan más?](Proyecto5/) 
  - [Países: ¿Quién ha ganado más torneos?](Proyecto6/) 
