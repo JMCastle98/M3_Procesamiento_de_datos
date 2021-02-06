@@ -5,3 +5,4 @@
 ### Imágen Postwork4.5 recuperada de: http://www.lemen.com/imageBootstrap1.html
 ### Imágen logo-mongodb recuperada de: https://infinapps.com/obira-hosting/mongodb-logo/
 ### Imágen portada_definitiva recuperada de: https://rincondelatecnologia.com/esports-deporte-influencia/
+### Imágen logo_kaggle recuperada de: https://inlab.fib.upc.edu/es/blog/plataforma-para-hacer-competicions-de-inteligencia-artificial
