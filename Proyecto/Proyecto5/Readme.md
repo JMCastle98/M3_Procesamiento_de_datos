@@ -60,6 +60,21 @@ ganancias_equipos %>% group_by(Genre) %>%
 <img src="../../Imágenes/Proyecto5.4.png">
 </p>
 
+### Resultados
+
+Es de notarse que si bien los premios individuales son mayores en la gran mayoría de los casos, el grado de dificultad también es mucho más alto, el estilo de juego es un factor importante a la hora de desempeñarse en los eSports. Para ilustrar mejor los resultados obtenidos se elaboraron las siguientes plantillas: 
 
 
+<p align="center">
+<img src="../../Imágenes/Proyecto5.5.png">
+</p>
+
+
+<p align="center">
+<img src="../../Imágenes/Proyecto5.6.png">
+</p>
+
+
+
+Para responder a la pregunta ¿Es viable convertirse en jugador profesional?, si nos aproximamos desde el un punto de vista puramente ecónomico, la respuesta es totalmente afirmativa, un salario medio es más que suficiente para tener una vida digna. Pero como cualquier otro deporte, se necesita de dedicación, sacrificios, entrenamiento y amor por los videojuegos. Recuerda que lo importante es entregarse al arte, ¡El dinero llegará después¡
 
