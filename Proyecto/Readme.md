@@ -9,12 +9,12 @@ Los deportes electrónicos o esports son una actividad en la que dos o más juga
 Esta misma pasión e interés común nos ha motivado a elegir a los eSports como un tema interesante, del cual podemos obtener mucha información para exponer el potencial que pueden alcanzar los deportes electrónicos. Para realizar este proyecto analizamos diferentes datasets, de los cuales filtramos información que responda algunas preguntas claves, así como hipótesis que discuten el futuro de los Esports.
 
 ### Contenido
- - [Datasets: ¿Con qué información sobre Esports contamos?](Proyecto1/)  
+ - [Datasets: ¿Con qué información sobre eSports contamos?](Proyecto1/)  
  - [Datos generales: ¿Cómo han crecido los jugadores, torneos y ganancias generadas a lo largo de los años?](Proyecto2/) 
  - [Géneros: ¿Qué juegos han dado los mejores premios?¿Qué juegos han tenido más torneos?](Proyecto3/) 
  - [Streaming: Juegos con más seguidores y su promedio de visitas.](Proyecto4/)
  - [Jugadores y equipos: ¿Cuáles ganan más dinero?¿Es viable convertirse en jugador profesional?](Proyecto5/) 
  - [Países: ¿Quién ha ganado más torneos?](Proyecto6/) 
- - [Hipótesis: ¿Existe una relación entre las variables?¿Entre cuales?](Proyecto7/)
- - [Hipótesis: Los esports cuentan con un ecosistema sustentable en constante crecimiento.](Proyecto8/) 
+ - [Hipótesis: ¿Existe una relación entre las variables?¿Entre cuáles?](Proyecto7/)
+ - [Hipótesis: Los eSports cuentan con un ecosistema sustentable en constante crecimiento.](Proyecto8/) 
 
