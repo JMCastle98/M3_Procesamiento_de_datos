@@ -28,19 +28,22 @@ Serie_tiempo <- function(Dato,inicio,fin){
   Dato.ts <- ts(Dato, start = c(inicio,1), end =  c(fin,12), freq = 12)        #Se crea la serie de tiempo con los datos de entrada y una frecuencia de 12 meses.
   
 ```  
+
+El siguiente paso es crear modelo, aunque este noe se ajustará del todo, porque en los residuales aún quedarán autocorrelaciones estadísticamente diferentes de cero:
   
 ```R  
 
-  Time <- 1:length(Dato.ts)                                           #Se crea una variable tiempo que cuente los meses de la serie
-  Imth <- cycle(Dato.ts)                                              #
-  Dato.lm <- lm(log(Dato.ts) ~ Time + I(Time^2) + factor(Imth))
+  Time <- 1:length(Dato.ts)                                          
+  Imth <- cycle(Dato.ts)                                             
+  Dato.lm <- lm(log(Dato.ts) ~ Time + I(Time^2) + factor(Imth))       
   
-  plot(resid(Dato.lm), type = "l", main = "", xlab = "", ylab = "")
+  plot(resid(Dato.lm), type = "l", main = "", xlab = "", ylab = "")   
   title(main = "Serie de residuales del modelo de regresión ajustado",
         xlab = "Tiempo",
         ylab = "Residuales")
 ```        
-        
+ 
+Posteriormente se busca encontrar el mejor modelo ARMA(p, q) considerando el AIC (Akaike Information Criterion). El ajuste se realiza para la serie de tiempo de los residuales del ajuste anterior:
         
 ```R
   
@@ -56,10 +59,15 @@ Serie_tiempo <- function(Dato,inicio,fin){
     }
   }
   
-  #best.order
+  best.order
   
+```  
+  
+  
+```R  
+
   acf(resid(best.arma), main = "")
-  title(main = "Serie de residuales del modelo ARMA(2, 0) ajustado",
+  title(main = "Serie de residuales del modelo ARMA ajustado",
         sub = "Serie de residuales del modelo de regresión ajustado a los datos")
   
   new.time <- seq(length(Dato.ts)+1, length = 36)
@@ -110,6 +118,5 @@ Serie_tiempo <- function(Dato,inicio,fin){
 (A1 <- Serie_tiempo(df$Torneos,2001,2020))
 (A2 <- Serie_tiempo(df$Jugadores,2001,2020))
 (A3 <- Serie_tiempo(df$Ganancias,2001,2020))
-
    
 ```
