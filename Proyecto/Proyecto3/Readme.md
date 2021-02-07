@@ -133,8 +133,6 @@ La forma indicada de llamar a la función para cada campo es la siguiente:
 ```R
 (best_genero("TotalEarnings"))
 (best_genero("TotalTournaments"))
-#(best_genero("TotalPlayers"))
-#(best_genero("OnlineEarnings"))
 ```
 
 Siendo los primeros dos campos los que nos ayudarán a responder las preguntas clave.
