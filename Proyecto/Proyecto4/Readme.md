@@ -92,3 +92,5 @@ twitch.juegos()
 <p align="center">
 <img src="../../Imágenes/Proyecto_twitch.png">
 </p>
+
+Podemos notar que el juego con más vistas es es Dota2, a su vez este también se presenta en el número de seguidores, mientras que League of Legends tiene una importante participación en ambos casos.
