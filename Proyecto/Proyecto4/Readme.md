@@ -88,3 +88,7 @@ figure1                                               #Mándamos a llamar al pan
 }
 twitch.juegos()
 ```
+
+<p align="center">
+<img src="../../Imágenes/Proyecto_twitch.png">
+</p>
