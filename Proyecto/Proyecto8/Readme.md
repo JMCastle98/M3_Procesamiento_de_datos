@@ -67,7 +67,9 @@ Posteriormente se busca encontrar el mejor modelo ARMA(p, q) considerando el AIC
         sub = "Serie de residuales del modelo de regresión ajustado a los datos")
   
 ```  
-  
+
+Las predicciones pueden ser mejoradas con un modelo "más adecuado" :
+
   
 ```R  
   
@@ -79,9 +81,11 @@ Posteriormente se busca encontrar el mejor modelo ARMA(p, q) considerando el AIC
   
 ```
 
+Finalmente establecemos un filtro para las etiquetas de nuestros gráficos resultantes en las distintas variables:
+
 ```R
   
-  if(all(Dato == df$Torneos)){
+  if(all(Dato == df$Torneos)){                                      #All() compara elemento a elemento la igualdad
     Titulo <- "Total de torneos de Esports por mes"
     ylabel <- "Torneos totales"
   }
@@ -96,16 +100,16 @@ Posteriormente se busca encontrar el mejor modelo ARMA(p, q) considerando el AIC
   }
   
 ```
+
+Para graficar nos apoyamos de `ts_ggplot()`, una función del paquete `tsbox` para graficar series de tiempo en `ggplot`:
   
 ```R  
-  graph <- ts_ggplot(Evolucion = Dato.ts, Prediccion = Dato.pred)+
+  graph <- ts_ggplot(Evolucion = Dato.ts, Prediccion = Dato.pred)+                                
     theme_tsbox() + scale_color_tsbox()+
     labs(title= Titulo , subtitle = "Serie mensual desde Enero de 2001",
          x="Años", y= ylabel, caption="Predicción de 36 meses")+
     theme(plot.title = element_text(hjust = 0.5),plot.subtitle = element_text(hjust = 0.5))+
     geom_line(size=1)
-  
-  
   
   return(graph)
   
@@ -113,6 +117,7 @@ Posteriormente se busca encontrar el mejor modelo ARMA(p, q) considerando el AIC
 
 ```
 
+Llamamos a las funciones con las columnas que nos interesan en el periodo adecuado:
 
 ```R
 
@@ -121,3 +126,45 @@ Posteriormente se busca encontrar el mejor modelo ARMA(p, q) considerando el AIC
 (A3 <- Serie_tiempo(df$Ganancias,2001,2020))
    
 ```
+
+### Resultados
+
+Los gráficos devueltos por la función son los siguientes:
+
+<p align="center">
+<img src="../../Imágenes/Proyecto6.1.jpeg">
+</p>
+
+<p align="center">
+<img src="../../Imágenes/Proyecto6.2.jpeg">
+</p>
+
+<p align="center">
+<img src="../../Imágenes/Proyecto6.3.jpeg">
+</p>
+
+<p align="center">
+<img src="../../Imágenes/Proyecto6.4.jpeg">
+</p>
+
+<p align="center">
+<img src="../../Imágenes/Proyecto6.5.jpeg">
+</p>
+
+<p align="center">
+<img src="../../Imágenes/Proyecto6.6.jpeg">
+</p>
+
+<p align="center">
+<img src="../../Imágenes/Proyecto6.7.jpeg">
+</p>
+
+<p align="center">
+<img src="../../Imágenes/Proyecto6.8.jpeg">
+</p>
+
+<p align="center">
+<img src="../../Imágenes/Proyecto6.9.jpeg">
+</p>
+
+### Conclusión
