@@ -2,7 +2,7 @@
 
 
 
-Los Esports irrumpieron en la escena mundial a finales de los 2000 cuando las compañías de videojuegos decideron apostar e invertir cantidades considerables en el desarrollo de juegos y plataformas que permitieran la competencia multijugador, a partir de entonces una cantidad considerable de personas se unieron a estás plataformas, lo que trajo consigo un aumento en el número de jugadores, ganancias y torneos.
+Los eSsports irrumpieron en la escena mundial a finales de los 2000 cuando las compañías de videojuegos decideron apostar e invertir cantidades considerables en el desarrollo de juegos y plataformas que permitieran la competencia multijugador, a partir de entonces una cantidad considerable de personas se unieron a estás plataformas, lo que trajo consigo un aumento en el número de jugadores, ganancias y torneos.
 
 A contunación se desarrolla un panorama del como han crecido las variables mencionadas a lo largo de los últimos 20 años. 
 
