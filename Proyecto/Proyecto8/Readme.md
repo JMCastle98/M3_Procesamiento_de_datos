@@ -25,10 +25,14 @@ La predicción se realiza con una función, que obtiene 3 entradas:
 ```R
 Serie_tiempo <- function(Dato,inicio,fin){
   
-  Dato.ts <- ts(Dato, start = c(inicio,1), end =  c(fin,12), freq = 12)
+  Dato.ts <- ts(Dato, start = c(inicio,1), end =  c(fin,12), freq = 12)        #Se crea la serie de tiempo con los datos de entrada y una frecuencia de 12 meses.
   
-  Time <- 1:length(Dato.ts)
-  Imth <- cycle(Dato.ts)
+```  
+  
+```R  
+
+  Time <- 1:length(Dato.ts)                                           #Se crea una variable tiempo que cuente los meses de la serie
+  Imth <- cycle(Dato.ts)                                              #
   Dato.lm <- lm(log(Dato.ts) ~ Time + I(Time^2) + factor(Imth))
   
   plot(resid(Dato.lm), type = "l", main = "", xlab = "", ylab = "")
