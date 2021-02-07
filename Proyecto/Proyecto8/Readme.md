@@ -168,3 +168,5 @@ Los gráficos devueltos por la función son los siguientes:
 </p>
 
 ### Conclusión
+
+Con base en las predicciones obtenidas, y también en el desarrollo de los eSports a lo largo de los años, podemos concluir que los eSports no son un fenómeno fugaz. Los eSports son una tendencia cada vez más creciente que ha sabido sacar provecho de sus seguidores y participantes por igual. A pesar de haber enfrentado dificultades en sus comienzos y una leve caída a causa del COVID-19, nos encontramos ante un medio que mueve masas, que interactúa con sus consumidores y que busca incorporarse al mundo de los deportes tradicionales como un nuevo estándar competitivo.
