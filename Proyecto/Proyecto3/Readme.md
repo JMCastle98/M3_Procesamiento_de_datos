@@ -42,14 +42,12 @@ general$Genre[which(general$Genre == "Fighting")] <- "Peleas"
 general$Genre[which(general$Genre == "Racing")] <- "Carreras"
 ```
 
-Gracias a funciones como `gsub()` y `which()` el procedimiento resulta bastante sencillo. Ahora bien, el data frame `general` posee 4 campos que podemos agrupar por género:
+Gracias a funciones como `gsub()` y `which()` el procedimiento resulta bastante sencillo. Ahora bien, el data frame `general` posee 4 campos que podemos agrupar por género, pero solo dos nos interesan:
 
 - TotalTournaments: Torneos totales de cada juego.
 - TotalEarnings: Ganancias totales otorgadas como premio de cada juego.
-- TotalPlayers: Participantes en cada torneo.
-- OnlineEarnings: Parte de las ganancias totales que se obtuvieron en transacciones online.
 
-Obtener un agrupamiento para estas 4 variables y a partir de ellos realizar un gráfico es un proceso similar en todos los casos, por lo que para reducir significativamente la cantidad de código se optó para crear una función que devuelva un gráfico construido de acuerdo al campo deseado:
+Obtener un agrupamiento para estas variables y a partir de ellos realizar un gráfico es un proceso similar en ambos los casos, por lo que para reducir significativamente la cantidad de código se optó para crear una función que devuelva un gráfico construido de acuerdo al campo deseado:
 
 ```R
 best_genero <- function(Dato){
@@ -80,22 +78,7 @@ if (Dato == "TotalTournaments"){                                                
     ylabel <- "Juegos"
     title <- "Juegos con los mejores premios con base en el género"
   }
-  if (Dato == "TotalPlayers"){
-    base <- 1e03
-    df <- df %>% group_by(Genre) %>% filter( TotalPlayers == max(TotalPlayers))
-    df <- df %>% mutate( Mejor = (TotalPlayers/base))
-    xlabel <- "Número de participantes (miles)"
-    ylabel <- "Juegos"
-    title <- "Juegos con la mayor cantidad de participantes con base en el género"
-  }
-  if (Dato == "OnlineEarnings"){
-    base <- 1e06
-    df <- df %>% group_by(Genre) %>% filter( OnlineEarnings == max(OnlineEarnings))
-    df <- df %>% mutate( Mejor = signif((OnlineEarnings/base),3))
-    xlabel <- "Premio Online en mdd"
-    ylabel <- "Juegos"
-    title <- "Juegos con las mejores recaudaciones online con base en el género"
-  }
+
 ```
 
 Una vez filtrados y tratados los datos de acuerdo al campo solicitado, así como declarados los elementos gráficos correspondientes, se presentan arreglos para la exposición de los datos en forma descendente, es decir del valor máximo al valor mínimo. Para que `ggplot` respete este orden, modificamos los campos Genre y Game de tipo factor, reordenando los niveles de acuerdo a la nueva jerarquía:
