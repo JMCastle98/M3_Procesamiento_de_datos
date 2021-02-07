@@ -68,7 +68,6 @@ library(multipanelfigure)     #Crear multipaneles con ggplot
 library(lubridate)            #Manejo de fechas
 library(ggrepel)              #Etiquetas/labels separadas en las gráficas
 library(tsbox)                #TS_BOX le permite a ggplot plotear series de tiempo
-library(ggeasy)               #Facilita el manejo de titulos de ggplot dentro de multipanelfigure
 ```
 
 ### Complementando información
