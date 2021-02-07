@@ -4,7 +4,7 @@ A lo largo de este proyecto hemos observado el auge de los eSports, así como de
 
 ### ¿Seguirán existiendo los esports o son solo un fenómeno fugaz? 
 
-Para poder responder de una manera más concisa, haremos uso de una prediccón basándonos en series de tiempo. Para encontrar el desarrollo de las variables de Jugadores, Torneos y ganancias a lo largo del tiempo nos apoyaremos del data frame `join`, el cual debemos recordar es la unión de `GeneralEsportData.csv` e `HistoricalEsportData.csv`:
+Para poder responder de una manera más concisa, haremos uso de una prediccón basándonos en series de tiempo, utilizando un [método](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-06/Ejemplo-02) visto durante las sesiones del curso. Para encontrar el desarrollo de las variables de Jugadores, Torneos y ganancias a lo largo del tiempo nos apoyaremos del data frame `join`, el cual debemos recordar es la unión de `GeneralEsportData.csv` e `HistoricalEsportData.csv`:
 
 ```R
 
@@ -29,7 +29,7 @@ Serie_tiempo <- function(Dato,inicio,fin){
   
 ```  
 
-El siguiente paso es crear modelo, aunque este noe se ajustará del todo, porque en los residuales aún quedarán autocorrelaciones estadísticamente diferentes de cero:
+El siguiente paso es crear modelo, aunque este no se ajustará del todo, porque en los residuales aún quedarán autocorrelaciones diferentes de cero:
   
 ```R  
 
@@ -61,14 +61,15 @@ Posteriormente se busca encontrar el mejor modelo ARMA(p, q) considerando el AIC
   
   best.order
   
+  
+  acf(resid(best.arma), main = "")
+  title(main = "Serie de residuales del modelo ARMA ajustado",
+        sub = "Serie de residuales del modelo de regresión ajustado a los datos")
+  
 ```  
   
   
 ```R  
-
-  acf(resid(best.arma), main = "")
-  title(main = "Serie de residuales del modelo ARMA ajustado",
-        sub = "Serie de residuales del modelo de regresión ajustado a los datos")
   
   new.time <- seq(length(Dato.ts)+1, length = 36)
   new.data <- data.frame(Time = new.time, Imth = rep(1:12, 3))
