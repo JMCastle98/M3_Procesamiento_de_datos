@@ -93,4 +93,6 @@ twitch.juegos()
 <img src="../../Imágenes/Proyecto_twitch.png">
 </p>
 
-Podemos notar que el juego con más vistas es es Dota2, a su vez este también se presenta en el número de seguidores, mientras que League of Legends tiene una importante participación en ambos casos.
+### Resultados
+Podemos notar que el juego con más vistas es Dota2 con más de 250 mil visitas, seguido por muy detrás por League of Legends, con alrededor de 100 mil visitas en promedio, estos dos juegos pertenecen al genero de MOBA, el cual entrega la mayor cantidad de premios.
+Por otra parte el juego que cuenta con mayor cantidad de seguidores es League of Legends con más de 6 millones de seguidores.
