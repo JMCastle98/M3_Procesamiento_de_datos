@@ -25,12 +25,12 @@ Y somos un grupo de estudiantes que formamos parte del curso de Data Analysis qu
 
 #### Postworks Módulo 3 "Procesamiento de datos con Python"
 
- - [Postwork Sesión 1: Fundamentos de Python ](Postwork1/) 
- - [Postwork Sesión 2: Estructuras de Datos y Funciones](Postwork2/) 
- - [Postwork Sesión 3: Programación funcional, operadores lógicos y funciones lambda](Postwork3/)
- - [Postwork Sesión 4: Pandas y Análisis Exploratorio de Datos](Postwork4/) 
- - [Postwork Sesión 5: Funciones Vectorizadas y Limpieza de Datos](Postwork5/) 
- - [Postwork Sesión 6: APIs, automatización y concatenación de DataFrames](Postwork6/)
- - [Postwork Sesión 7: Transformación, filtración y ordenamiento de datos](Postwork7/) 
- - [Postwork Sesión 8: Bases de datos, merge y agrupaciones](Postwork8/)
+ - [Postwork Sesión 1: Fundamentos de Python ](M3_Postwork1/) 
+ - [Postwork Sesión 2: Estructuras de Datos y Funciones](M3_Postwork2/) 
+ - [Postwork Sesión 3: Programación funcional, operadores lógicos y funciones lambda](M3_Postwork3/)
+ - [Postwork Sesión 4: Pandas y Análisis Exploratorio de Datos](M3_Postwork4/) 
+ - [Postwork Sesión 5: Funciones Vectorizadas y Limpieza de Datos](M3_Postwork5/) 
+ - [Postwork Sesión 6: APIs, automatización y concatenación de DataFrames](M3_Postwork6/)
+ - [Postwork Sesión 7: Transformación, filtración y ordenamiento de datos](M3_Postwork7/) 
+ - [Postwork Sesión 8: Bases de datos, merge y agrupaciones](M3_Postwork8/)
  - [Proyecto Final: Análisis de datos de Esports](Proyecto/)
