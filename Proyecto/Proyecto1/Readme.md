@@ -55,7 +55,7 @@ str(ganancias_equipos); summary(ganancias_equipos)
 
 La mayoría de los datos son de númericos, o en su defecto *factores* a los cuales les sacaremos provecho gracias a los *niveles* que poseen, también hay campos de fecha que debemos tratar adecuadamente para una mejor representación de nuestros datos.
 
-### Paquete utilizados
+### Paquetes utilizados
 
 Para facilitar y en algunos casos posibilitar objetivos, hicimos uso de una serie de paquetes de R que deben ser cargados para que nuestras gráficas y resultados se presenten correctamente:
 
