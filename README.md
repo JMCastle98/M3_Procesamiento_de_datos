@@ -7,7 +7,7 @@
 
 <img src="https://prod-discovery.edx-cdn.org/media/course/image/fa82aec4-f617-4efc-b64e-2855f1567df4-3c78499bb9f8.small.png" align="right" height="200" width="250">
 
-Y somos un grupo de estudiantes que formamos parte del curso de Data Analysis que ofrece BEDU como parte de la Beca Santander – BEDU: Disruptive Innovation: Data Science. Durante este curso hemos adquirido una gran variedad de habilidades y herramientas de gran importancia para nuestro aprendizaje sobre el análisis de datos. Para aterrizar los conocimientos de las sesiones del módulo 3, hemos realizado una serie de trabajos denominados *postworks*, la finalidad de este repositorio es entonces; exponer las soluciones a las que hemos llegado como equipo a dichos postworks exponiendo nuestro proceso de aprendizaje y discutiendo las diversas maneras de resolver los problemas.
+Y somos estudiantes que formamos parte del curso de Data Analysis que ofrece BEDU como parte de la Beca Santander – BEDU: Disruptive Innovation: Data Science. Durante este curso hemos adquirido una gran variedad de habilidades y herramientas de gran importancia para nuestro aprendizaje sobre el análisis de datos. Para aterrizar los conocimientos de las sesiones del módulo 3, hemos realizado una serie de trabajos denominados *postworks*, la finalidad de este repositorio es entonces; exponer las soluciones a las que hemos llegado como equipo a dichos postworks que serán de gran utilidad para el proyecto final, exponiendo nuestro proceso de aprendizaje y discutiendo las diversas maneras de resolver los problemas.
 
 ### Contenido
 #### Postworks Módulo 3 "Procesamiento de datos con Python"
