@@ -32,4 +32,4 @@ Y somos un grupo de estudiantes que formamos parte del curso de Data Analysis qu
  - [Postworks Sesión 5 y 6: Funciones Vectorizadas y Limpieza de Datos / APIs, automatización y concatenación de DataFrames](M3_Postworks5,6/Postwork_05_06_python.ipynb) 
  - [Postwork Sesión 7: Transformación, filtración y ordenamiento de datos](M3_Postwork7/Postwork_07_python.ipynb) 
  - [Postwork Sesión 8: Bases de datos, merge y agrupaciones](M3_Postwork8/Postwork_08_python.ipynb)
- - [Proyecto Final: Análisis de datos de Esports](Proyecto/)
+ - [Proyecto Final: Aportar un Dataset para el análisis de eSports](Proyecto/)
