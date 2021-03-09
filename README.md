@@ -33,3 +33,7 @@ Y somos un grupo de estudiantes que formamos parte del curso de Data Analysis qu
  - [Postwork Sesión 7: Transformación, filtración y ordenamiento de datos](M3_Postwork7/) 
  - [Postwork Sesión 8: Bases de datos, merge y agrupaciones](M3_Postwork8/)
  - [Proyecto Final: Aportar un Dataset para el análisis de eSports y aplicaciones de ML](M3_ProyectoFinal/)
+
+El entregable final del Módulo 3 que recopila todo nuestro trabajo se encuentra aquí:
+ - [Entregable Final: Procesamiento de Datos_JuanOvando_DanielPérez](Entrega_Final_Procesamiento_JuanOvando_DanielPeréz/)
+
