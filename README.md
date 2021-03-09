@@ -25,11 +25,11 @@ Y somos un grupo de estudiantes que formamos parte del curso de Data Analysis qu
 
 #### Postworks Módulo 3 "Procesamiento de datos con Python"
 
- - [Postwork Sesión 1: Fundamentos de Python ](M3_Postwork1/Postwork_01_python.ipynb) 
- - [Postwork Sesión 2: Estructuras de Datos y Funciones](M3_Postwork2/Postwork_02_python.ipynb) 
- - [Postwork Sesión 3: Programación funcional, operadores lógicos y funciones lambda](M3_Postwork3/Postwork_03_python.ipynb)
- - [Postwork Sesión 4: Pandas y Análisis Exploratorio de Datos](M3_Postwork4/Postwork_04_python.ipynb) 
- - [Postworks Sesión 5 y 6: Funciones Vectorizadas y Limpieza de Datos / APIs, automatización y concatenación de DataFrames](M3_Postworks5,6/Postwork_05_06_python.ipynb) 
- - [Postwork Sesión 7: Transformación, filtración y ordenamiento de datos](M3_Postwork7/Postwork_07_python.ipynb) 
- - [Postwork Sesión 8: Bases de datos, merge y agrupaciones](M3_Postwork8/Postwork_08_python.ipynb)
- - [Proyecto Final: Aportar un Dataset para el análisis de eSports y aplicaciones de ML](Proyecto/)
+ - [Postwork Sesión 1: Fundamentos de Python ](M3_Postwork1/) 
+ - [Postwork Sesión 2: Estructuras de Datos y Funciones](M3_Postwork2/) 
+ - [Postwork Sesión 3: Programación funcional, operadores lógicos y funciones lambda](M3_Postwork3/)
+ - [Postwork Sesión 4: Pandas y Análisis Exploratorio de Datos](M3_Postwork4/) 
+ - [Postworks Sesión 5 y 6: Funciones Vectorizadas y Limpieza de Datos / APIs, automatización y concatenación de DataFrames](M3_Postworks5,6/) 
+ - [Postwork Sesión 7: Transformación, filtración y ordenamiento de datos](M3_Postwork7/) 
+ - [Postwork Sesión 8: Bases de datos, merge y agrupaciones](M3_Postwork8/)
+ - [Proyecto Final: Aportar un Dataset para el análisis de eSports y aplicaciones de ML](M3_ProyectoFinal/)
